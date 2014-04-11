@@ -1,0 +1,6 @@
+- device_instances.each do |di|
+  %tr.report_count{'data-device_id' => di._id}
+    %td.loading
+    %td= di._id
+    %td= di.name
+    %td

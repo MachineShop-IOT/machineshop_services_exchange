@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>module ApplicationHelper - App Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/application_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-cache_it">#cache_it</a>
+    
+    <li><a href="#method-i-customers">#customers</a>
+    
+    <li><a href="#method-i-device_instances">#device_instances</a>
+    
+    <li><a href="#method-i-find_customer">#find_customer</a>
+    
+    <li><a href="#method-i-find_device_instance">#find_device_instance</a>
+    
+    <li><a href="#method-i-find_rule">#find_rule</a>
+    
+    <li><a href="#method-i-find_user">#find_user</a>
+    
+    <li><a href="#method-i-format_time">#format_time</a>
+    
+    <li><a href="#method-i-last_report">#last_report</a>
+    
+    <li><a href="#method-i-rules">#rules</a>
+    
+    <li><a href="#method-i-users">#users</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./MachineshopPortal.html">MachineshopPortal</a>
+  
+    <li><a href="./MachineshopPortal/Application.html">MachineshopPortal::Application</a>
+  
+    <li><a href="./AdminController.html">AdminController</a>
+  
+    <li><a href="./AdminHelper.html">AdminHelper</a>
+  
+    <li><a href="./ApiCalls.html">ApiCalls</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CustomersController.html">CustomersController</a>
+  
+    <li><a href="./CustomersHelper.html">CustomersHelper</a>
+  
+    <li><a href="./Dashboard.html">Dashboard</a>
+  
+    <li><a href="./DashboardHelper.html">DashboardHelper</a>
+  
+    <li><a href="./DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="./DeviceInstance.html">DeviceInstance</a>
+  
+    <li><a href="./Document.html">Document</a>
+  
+    <li><a href="./DocumentsController.html">DocumentsController</a>
+  
+    <li><a href="./DocumentsHelper.html">DocumentsHelper</a>
+  
+    <li><a href="./MachineShopApi.html">MachineShopApi</a>
+  
+    <li><a href="./Report.html">Report</a>
+  
+    <li><a href="./ReportsController.html">ReportsController</a>
+  
+    <li><a href="./ReportsHelper.html">ReportsHelper</a>
+  
+    <li><a href="./Rule.html">Rule</a>
+  
+    <li><a href="./RulesController.html">RulesController</a>
+  
+    <li><a href="./RulesHelper.html">RulesHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserSession.html">UserSession</a>
+  
+    <li><a href="./UserSessionsController.html">UserSessionsController</a>
+  
+    <li><a href="./UserWidget.html">UserWidget</a>
+  
+    <li><a href="./UserWidgetsController.html">UserWidgetsController</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WelcomesController.html">WelcomesController</a>
+  
+    <li><a href="./Widget.html">Widget</a>
+  
+    <li><a href="./WidgetPermission.html">WidgetPermission</a>
+  
+    <li><a href="./WidgetsController.html">WidgetsController</a>
+  
+    <li><a href="./WidgetsHelper.html">WidgetsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module ApplicationHelper</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-cache_it" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cache_it</span><span
+            class="method-args">(object, cache_key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cache_it-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cache_it</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">cache_key</span>)
+  <span class="ruby-identifier">objects</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">_id</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">cache_key</span>, <span class="ruby-identifier">expires_in</span><span class="ruby-operator">:</span> <span class="ruby-value">3</span>.<span class="ruby-identifier">minutes</span>, <span class="ruby-identifier">race_condition_ttl</span><span class="ruby-operator">:</span> <span class="ruby-value">10</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">object</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">objects</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cache_it-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cache_it-method -->
+
+    
+      <div id="method-i-customers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">customers</span><span
+            class="method-args">(query=nil, page=1, per_page=10)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="customers-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">customers</span>(<span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">per_page</span>=<span class="ruby-value">10</span>)
+  <span class="ruby-identifier">customers</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-node">&quot;#{current_user._id}customers#{query}#{page}&quot;</span>, <span class="ruby-identifier">expires_in</span><span class="ruby-operator">:</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">minute</span>, <span class="ruby-identifier">race_condition_ttl</span><span class="ruby-operator">:</span> <span class="ruby-value">10</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">customers</span>(<span class="ruby-identifier">page</span>, <span class="ruby-identifier">query</span>, <span class="ruby-identifier">per_page</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">customers</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">customers</span>) <span class="ruby-operator">:</span> []
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- customers-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- customers-method -->
+
+    
+      <div id="method-i-device_instances" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">device_instances</span><span
+            class="method-args">(page=1)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="device_instances-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">device_instances</span>(<span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>)
+  <span class="ruby-constant">DeviceInstance</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">instances</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-node">&quot;#{current_user._id}device_instances_page#{page}&quot;</span>, <span class="ruby-identifier">expires_in</span><span class="ruby-operator">:</span> <span class="ruby-value">5</span>.<span class="ruby-identifier">minutes</span>, <span class="ruby-identifier">race_condition_ttl</span><span class="ruby-operator">:</span> <span class="ruby-value">10</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">device_instances</span>(<span class="ruby-identifier">page</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">instances</span>)
+  <span class="ruby-comment"># return cache_it(current_user.device_instances, 'device_instances')</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- device_instances-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- device_instances-method -->
+
+    
+      <div id="method-i-find_customer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_customer</span><span
+            class="method-args">(user_id, page=1, query=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="find_customer-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_customer</span>(<span class="ruby-identifier">user_id</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">selected</span> = <span class="ruby-identifier">customers</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">page</span>).<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">user_id</span>}
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">selected</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">selected</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">customer</span>(<span class="ruby-identifier">user_id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find_customer-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find_customer-method -->
+
+    
+      <div id="method-i-find_device_instance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_device_instance</span><span
+            class="method-args">(id, page=1)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="find_device_instance-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_device_instance</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>)
+  <span class="ruby-identifier">selected</span> = <span class="ruby-identifier">device_instances</span>(<span class="ruby-identifier">page</span>).<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">id</span>}
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">device_instances</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">selected</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">selected</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find_device_instance-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find_device_instance-method -->
+
+    
+      <div id="method-i-find_rule" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_rule</span><span
+            class="method-args">(rule_id, page=1, query=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="find_rule-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_rule</span>(<span class="ruby-identifier">rule_id</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">selected</span> = <span class="ruby-identifier">rules</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">page</span>).<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">rule_id</span>}
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">selected</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">selected</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">rules</span>(<span class="ruby-identifier">rule_id</span>)
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find_rule-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find_rule-method -->
+
+    
+      <div id="method-i-find_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_user</span><span
+            class="method-args">(user_id, page=1, query=nil, expire_cache=false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="find_user-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_user</span>(<span class="ruby-identifier">user_id</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">expire_cache</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">current_user</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">selected</span> = <span class="ruby-identifier">users</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">page</span>, <span class="ruby-identifier">per_page</span>=<span class="ruby-value">10</span>, <span class="ruby-identifier">expire_cache</span>).<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">user_id</span>}
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">selected</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">selected</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">user</span>(<span class="ruby-identifier">user_id</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find_user-method -->
+
+    
+      <div id="method-i-format_time" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">format_time</span><span
+            class="method-args">(time_string)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="format_time-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">format_time</span>(<span class="ruby-identifier">time_string</span>)
+  <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">time_string</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%m/%d/%Y %I:%M%p&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">time_string</span>.<span class="ruby-identifier">blank?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- format_time-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- format_time-method -->
+
+    
+      <div id="method-i-last_report" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">last_report</span><span
+            class="method-args">(device_instance)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="last_report-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">last_report</span>(<span class="ruby-identifier">device_instance</span>)
+  <span class="ruby-identifier">report</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">_id</span> <span class="ruby-operator">+</span> <span class="ruby-string">'last_report'</span>, <span class="ruby-identifier">expires_in</span><span class="ruby-operator">:</span> <span class="ruby-value">2</span>.<span class="ruby-identifier">minutes</span>, <span class="ruby-identifier">race_condition_ttl</span><span class="ruby-operator">:</span> <span class="ruby-value">10</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">device_instance</span>.<span class="ruby-identifier">last_report</span>(<span class="ruby-identifier">current_user</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">report</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- last_report-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- last_report-method -->
+
+    
+      <div id="method-i-rules" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rules</span><span
+            class="method-args">(query=nil, page=1, per_page=10)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="rules-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rules</span>(<span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">per_page</span>=<span class="ruby-value">10</span>)
+  <span class="ruby-identifier">rules</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-node">&quot;#{current_user._id}rules#{query}#{page}&quot;</span>, <span class="ruby-identifier">expires_in</span><span class="ruby-operator">:</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">minute</span>, <span class="ruby-identifier">race_condition_ttl</span><span class="ruby-operator">:</span> <span class="ruby-value">10</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">rules</span>(<span class="ruby-identifier">page</span>, <span class="ruby-identifier">query</span>, <span class="ruby-identifier">per_page</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">rules</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">rules</span>) <span class="ruby-operator">:</span> []
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- rules-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rules-method -->
+
+    
+      <div id="method-i-users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">users</span><span
+            class="method-args">(query=nil, page=1, per_page=10, expire_cache=false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="users-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">users</span>(<span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">per_page</span>=<span class="ruby-value">10</span>, <span class="ruby-identifier">expire_cache</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">cache_key</span> = <span class="ruby-node">&quot;#{current_user._id}users#{query}#{page}&quot;</span>
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">delete_matched</span>(<span class="ruby-identifier">cache_key</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">expire_cache</span>
+  <span class="ruby-identifier">users</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">cache_key</span>, <span class="ruby-identifier">expires_in</span><span class="ruby-operator">:</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">minute</span>, <span class="ruby-identifier">race_condition_ttl</span><span class="ruby-operator">:</span> <span class="ruby-value">10</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">users</span>(<span class="ruby-identifier">page</span>, <span class="ruby-identifier">query</span>, <span class="ruby-identifier">per_page</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">users</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">users</span>) <span class="ruby-operator">:</span> []
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- users-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- users-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

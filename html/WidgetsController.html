@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class WidgetsController - App Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/widgets_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="ApplicationHelper.html">ApplicationHelper</a>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-api_usage">#api_usage</a>
+    
+    <li><a href="#method-i-get_device_instance_last_report">#get_device_instance_last_report</a>
+    
+    <li><a href="#method-i-get_device_instance_report_count">#get_device_instance_report_count</a>
+    
+    <li><a href="#method-i-get_device_instances">#get_device_instances</a>
+    
+    <li><a href="#method-i-get_device_instances_summary">#get_device_instances_summary</a>
+    
+    <li><a href="#method-i-retrieve_customers">#retrieve_customers</a>
+    
+    <li><a href="#method-i-retrieve_rule_by_id">#retrieve_rule_by_id</a>
+    
+    <li><a href="#method-i-retrieve_rules">#retrieve_rules</a>
+    
+    <li><a href="#method-i-retrieve_user_by_id">#retrieve_user_by_id</a>
+    
+    <li><a href="#method-i-retrieve_users">#retrieve_users</a>
+    
+    <li><a href="#method-i-system_usage">#system_usage</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./MachineshopPortal.html">MachineshopPortal</a>
+  
+    <li><a href="./MachineshopPortal/Application.html">MachineshopPortal::Application</a>
+  
+    <li><a href="./AdminController.html">AdminController</a>
+  
+    <li><a href="./AdminHelper.html">AdminHelper</a>
+  
+    <li><a href="./ApiCalls.html">ApiCalls</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CustomersController.html">CustomersController</a>
+  
+    <li><a href="./CustomersHelper.html">CustomersHelper</a>
+  
+    <li><a href="./Dashboard.html">Dashboard</a>
+  
+    <li><a href="./DashboardHelper.html">DashboardHelper</a>
+  
+    <li><a href="./DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="./DeviceInstance.html">DeviceInstance</a>
+  
+    <li><a href="./Document.html">Document</a>
+  
+    <li><a href="./DocumentsController.html">DocumentsController</a>
+  
+    <li><a href="./DocumentsHelper.html">DocumentsHelper</a>
+  
+    <li><a href="./MachineShopApi.html">MachineShopApi</a>
+  
+    <li><a href="./Report.html">Report</a>
+  
+    <li><a href="./ReportsController.html">ReportsController</a>
+  
+    <li><a href="./ReportsHelper.html">ReportsHelper</a>
+  
+    <li><a href="./Rule.html">Rule</a>
+  
+    <li><a href="./RulesController.html">RulesController</a>
+  
+    <li><a href="./RulesHelper.html">RulesHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserSession.html">UserSession</a>
+  
+    <li><a href="./UserSessionsController.html">UserSessionsController</a>
+  
+    <li><a href="./UserWidget.html">UserWidget</a>
+  
+    <li><a href="./UserWidgetsController.html">UserWidgetsController</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WelcomesController.html">WelcomesController</a>
+  
+    <li><a href="./Widget.html">Widget</a>
+  
+    <li><a href="./WidgetPermission.html">WidgetPermission</a>
+  
+    <li><a href="./WidgetsController.html">WidgetsController</a>
+  
+    <li><a href="./WidgetsHelper.html">WidgetsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class WidgetsController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-api_usage" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">api_usage</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="api_usage-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">api_usage</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> [<span class="ruby-value">400</span>, <span class="ruby-value">300</span>, <span class="ruby-value">200</span>, <span class="ruby-value">500</span>, <span class="ruby-value">600</span>, <span class="ruby-value">500</span>, <span class="ruby-value">100</span>, <span class="ruby-value">300</span>, <span class="ruby-value">800</span>, <span class="ruby-value">900</span>, <span class="ruby-value">300</span>, <span class="ruby-value">500</span>, <span class="ruby-value">700</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- api_usage-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- api_usage-method -->
+
+    
+      <div id="method-i-get_device_instance_last_report" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_device_instance_last_report</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_device_instance_last_report-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_device_instance_last_report</span>
+  <span class="ruby-identifier">page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">device</span> = <span class="ruby-identifier">find_device_instance</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:device_id</span>], <span class="ruby-identifier">page</span>)
+  <span class="ruby-identifier">last_report</span> = <span class="ruby-identifier">device</span>.<span class="ruby-identifier">last_report</span>(<span class="ruby-identifier">current_user</span>)
+  <span class="ruby-identifier">time</span> = <span class="ruby-identifier">last_report</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">format_time</span>(<span class="ruby-identifier">last_report</span>.<span class="ruby-identifier">created_at</span>) <span class="ruby-operator">:</span> <span class="ruby-string">&quot;(no reports)&quot;</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'shared/widgets/last_report'</span>, <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">time</span><span class="ruby-operator">:</span> <span class="ruby-identifier">time</span>, <span class="ruby-identifier">di</span><span class="ruby-operator">:</span> <span class="ruby-identifier">device</span>, <span class="ruby-identifier">report</span><span class="ruby-operator">:</span> <span class="ruby-identifier">last_report</span>}<span class="ruby-comment">#&lt;/td&gt;&lt;td&gt;#{device.name}&lt;/td&gt;&lt;td&gt;#{device.model}&lt;/td&gt;&lt;td&gt;&lt;div class='btn btn-mini btn-custom-msg'&gt;&lt;a href=#&gt;Message Detail&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;&quot;)</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_device_instance_last_report-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_device_instance_last_report-method -->
+
+    
+      <div id="method-i-get_device_instance_report_count" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_device_instance_report_count</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_device_instance_report_count-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_device_instance_report_count</span>
+  <span class="ruby-identifier">page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">device</span> = <span class="ruby-identifier">find_device_instance</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:device_id</span>], <span class="ruby-identifier">page</span>)
+  <span class="ruby-identifier">count_object</span> = [<span class="ruby-identifier">device</span>.<span class="ruby-identifier">_id</span>, <span class="ruby-identifier">device</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">device</span>.<span class="ruby-identifier">total_reports</span>(<span class="ruby-identifier">current_user</span>)[<span class="ruby-value">:count</span>]]
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'shared/widgets/report_count'</span>, <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">device_instance_count</span><span class="ruby-operator">:</span> <span class="ruby-identifier">count_object</span>, <span class="ruby-identifier">device_instance</span><span class="ruby-operator">:</span> <span class="ruby-identifier">device</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_device_instance_report_count-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_device_instance_report_count-method -->
+
+    
+      <div id="method-i-get_device_instances" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_device_instances</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_device_instances-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_device_instances</span>
+  <span class="ruby-identifier">page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'shared/widgets/device_instances_last_report'</span>, <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">device_instances</span><span class="ruby-operator">:</span> <span class="ruby-identifier">device_instances</span>(<span class="ruby-identifier">page</span>)}
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_device_instances-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_device_instances-method -->
+
+    
+      <div id="method-i-get_device_instances_summary" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_device_instances_summary</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_device_instances_summary-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_device_instances_summary</span>
+  <span class="ruby-identifier">page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'shared/widgets/device_instances_report_count'</span>, <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">device_instances</span><span class="ruby-operator">:</span> <span class="ruby-identifier">device_instances</span>(<span class="ruby-identifier">page</span>)}
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_device_instances_summary-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_device_instances_summary-method -->
+
+    
+      <div id="method-i-retrieve_customers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">retrieve_customers</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="retrieve_customers-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">retrieve_customers</span>
+  <span class="ruby-identifier">page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">query</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">users_array</span> = <span class="ruby-identifier">customers</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">page</span>)
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'shared/widgets/customer_list'</span>, <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">users</span><span class="ruby-operator">:</span> <span class="ruby-identifier">users_array</span>} }
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-identifier">users_array</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- retrieve_customers-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- retrieve_customers-method -->
+
+    
+      <div id="method-i-retrieve_rule_by_id" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">retrieve_rule_by_id</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="retrieve_rule_by_id-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">retrieve_rule_by_id</span>
+  <span class="ruby-identifier">rule</span> = <span class="ruby-identifier">find_rule</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:rule_id</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>])
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'shared/widgets/rule_row'</span>, <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">rule_instance</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rule</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- retrieve_rule_by_id-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- retrieve_rule_by_id-method -->
+
+    
+      <div id="method-i-retrieve_rules" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">retrieve_rules</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="retrieve_rules-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">retrieve_rules</span>
+  <span class="ruby-identifier">page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">query</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">rules_array</span> = <span class="ruby-identifier">rules</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">page</span>)
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'shared/widgets/rule_list'</span>, <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">rules</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rules_array</span>} }
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rules_array</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- retrieve_rules-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- retrieve_rules-method -->
+
+    
+      <div id="method-i-retrieve_user_by_id" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">retrieve_user_by_id</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="retrieve_user_by_id-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">retrieve_user_by_id</span>
+  <span class="ruby-identifier">user</span> = <span class="ruby-identifier">find_user</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>])
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'shared/widgets/user_row'</span>, <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">user_instance</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- retrieve_user_by_id-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- retrieve_user_by_id-method -->
+
+    
+      <div id="method-i-retrieve_users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">retrieve_users</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="retrieve_users-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">retrieve_users</span>
+  <span class="ruby-identifier">page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">query</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:query</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">users_array</span> = <span class="ruby-identifier">users</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">page</span>)
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'shared/widgets/user_list'</span>, <span class="ruby-value">:locals</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">users</span><span class="ruby-operator">:</span> <span class="ruby-identifier">users_array</span>} }
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-identifier">users_array</span> }
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- retrieve_users-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- retrieve_users-method -->
+
+    
+      <div id="method-i-system_usage" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">system_usage</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="system_usage-source">
+            <pre><span class="ruby-comment"># File app/controllers/widgets_controller.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">system_usage</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> [<span class="ruby-value">700</span>, <span class="ruby-value">800</span>, <span class="ruby-value">200</span>, <span class="ruby-value">500</span>, <span class="ruby-value">600</span>, <span class="ruby-value">100</span>, <span class="ruby-value">800</span>, <span class="ruby-value">700</span>, <span class="ruby-value">200</span>, <span class="ruby-value">100</span>, <span class="ruby-value">600</span>, <span class="ruby-value">700</span>, <span class="ruby-value">700</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- system_usage-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- system_usage-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

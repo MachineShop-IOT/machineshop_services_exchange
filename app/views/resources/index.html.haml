@@ -1,0 +1,27 @@
+.span10#support-wrap
+  %h3 Support
+  %p We are committed to helping you get your application running with our services as quickly as possible. If you need help, send us a support ticket or check our FAQ.
+
+  .span12.backboards-wrap.row1-backboards
+    = link_to new_support_ticket_path, class: 'span4 backboard-grey tall-backboard' do
+      %ul
+        %li
+          = image_tag('ticket.png')
+        %li
+          %h5 Submit Support Ticket
+        %li Having a Problem? Submit your issues here
+    = link_to support_tickets_path, class: 'span4 backboard-grey tall-backboard' do
+      %ul
+        %li
+          = image_tag('search_large.png')
+        %li
+          %h5 View Existing Tickets
+        %li Check on the status and responses for submitted tickets
+    = link_to faqs_path, class: 'span4 backboard-grey tall-backboard' do
+      %ul
+        %li
+          = image_tag('question.png')
+        %li
+          %h5 FAQ
+        %li View our Frequently Asked Questions
+    %p.span12#support-contact For immediate support call 781-530-4625 or email support@machineshop.io

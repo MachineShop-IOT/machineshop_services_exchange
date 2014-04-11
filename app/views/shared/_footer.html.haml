@@ -1,0 +1,61 @@
+%footer
+  - if params[:controller] != 'user_sessions'
+    .row-fluid.footer
+      .navbar
+        %a.btn.btn-navbar(data-target="#footer-nav-collapse" data-toggle="collapse")
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .nav-collapse#footer-nav-collapse
+          .span2
+          .span2
+            %ul
+              %li= link_to "HOME", "/"
+              %li= link_to "DASHBOARD", dashboard_path
+              %li= link_to "ADMIN", users_url
+              %li= link_to "DOCUMENTS", documents_index_url
+          .span2
+            %ul
+              %li= link_to "ADD NEW WIDGET", "#"
+              %li= link_to "HELP?", "#"
+              %li= link_to "LOGOUT", user_session_path, method: :delete
+          .span3
+            %ul
+              %li= link_to "PARTNERSHIPS, SALES AND GENERAL INQUIRIES", "#"
+              %li= link_to "CONNECT@MACHINESHOP.IO", "#"
+              %li= link_to "TECHSUPPORT SUPPORT@MACHINESHOP.IO", "#"
+              %li= link_to "TEL. +1 781 580 4625", "#"
+          .span3
+            %div#social-icons
+              = image_tag "social_icon_in.png", id: "linked-in"
+              = image_tag "social_icon_twitter.png",  id: "twitter"
+            %p#copyright
+              \&copy;2012
+              %span Machineshop
+              \&ndash; All rights reserved
+  - if params[:controller] == 'user_sessions'
+    .row-fluid.footer
+      .navbar
+        %a.btn.btn-navbar(data-target="#footer-nav-collapse" data-toggle="collapse")
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .nav-collapse#footer-nav-collapse
+          .span2
+          .span4
+            %ul
+              %li= link_to "PARTNERSHIPS, SALES AND GENERAL INQUIRIES", "#"
+              %li= link_to "CONNECT@MACHINESHOP.IO", "#"
+              %li= link_to "TECHSUPPORT SUPPORT@MACHINESHOP.IO", "#"
+              %li= link_to "TEL. +1 781 580 4625", "#"
+          .span3
+          .span3
+            %div#social-icons
+              = image_tag "social_icon_in.png", id: "linked-in"
+              = image_tag "social_icon_twitter.png",  id: "twitter"
+            %p#copyright
+              \&copy;2012
+              %span Machineshop
+              \&ndash; All rights reserved

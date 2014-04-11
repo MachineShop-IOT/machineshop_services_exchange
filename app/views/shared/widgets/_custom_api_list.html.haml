@@ -1,0 +1,17 @@
+- if custom_apis && custom_apis.length > 0
+  - custom_apis.each do |ca|
+    %tr.custom_api_info{'data-custom-api_id' => ca._id}
+      %td.loading
+      %td
+        = ca.base_domain
+      %td
+      %td
+      %td
+- else
+  %tr.custom_api_info
+    %td
+    %td
+      (no results)
+    %td
+    %td
+    %td

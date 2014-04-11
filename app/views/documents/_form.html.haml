@@ -1,0 +1,57 @@
+.edit-document{id: "document-edit-#{document._id}"}
+  = form_tag(document_path(document._id), method: :put, remote: true, data: { form: document._id, service: document.category }) do
+    = hidden_field_tag :end_point, document.end_point
+    .span12.api-method
+      %h4= document.end_point
+      %h5 Category:
+      = text_area_tag 'category', document.category, {class: "input-block-level"}
+      %h5 Description:
+      = text_area_tag 'description', document.description, {class: "input-block-level"}
+
+    - if document.parameters.blank?
+      .row-fluid
+        %table.table.table-striped.table-bordered.params-table
+          %thead
+            %tr
+              %th Parameter Name
+              %th Parameter Type
+              %th
+          %tbody.parameter-table
+            %tr
+              %td= text_field_tag "parameters_keys[]", nil, id: "param-name-#{document._id}", class: "input-block-level", placeholder: "No Parameters"
+              %td= text_field_tag "parameters_values[]", nil, id: "param-value-#{document._id}", class: "input-block-level", placeholder: "No Parameters"
+              %td
+                %ul.add-record.add-param
+                  %li= image_tag 'add-btn.png'
+                  %li Add
+
+    - else
+      .row-fluid
+        %table.table.table-striped.table-bordered.params-table
+          %thead
+            %tr
+              %th Parameter Name
+              %th Parameter Type
+              %th
+          %tbody
+            - document.parameters.each do |name, value|
+              %tr
+                %td= text_field_tag "parameters_keys[]", name, id: "param-name-#{document._id}", class: "input-block-level"
+                %td= text_field_tag "parameters_values[]", value, id: "param-value-#{document._id}", class: "input-block-level"
+                %td
+                  %ul.add-record.add-param
+                    %li= image_tag 'add-btn.png'
+                    %li Add
+
+    .span12.sample-code-edit.no-margin-left
+      %h5 Example Data:
+      = text_area_tag "return_example_edit-#{document._id}", document.return_example, :class => "ckeditor", :name => "return_example"
+
+    .span12.sample-code-edit.no-margin-left
+      %h5 Sample Ruby Code:
+      = text_area_tag "example_code_edit-#{document._id}", document.example_code, :class => "ckeditor", :name => "example_code"
+
+    .row-fluid.span12{style: "margin-left:0;"}
+      .save-cancel
+        %a.cancel-edit-doc Cancel
+        = submit_tag "Save Changes", class: "btn btn-custom-large save-doc-btn"

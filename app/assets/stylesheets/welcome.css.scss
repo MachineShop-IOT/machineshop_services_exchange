@@ -1,0 +1,79 @@
+/* ---------- Several of these styles apply to 'Resources' landing page as well ---------- */
+#padding-buffer {
+  padding:0 6%;
+}
+
+#landing-page {
+  text-align:center;
+  padding-top:2%;
+  margin:0;
+}
+
+#landing-page h3 {
+  color:#4d4d4d;
+  font-size:20px;
+  font-weight:normal;
+  line-height:22px;
+  margin-bottom:2%;
+  text-align:center;
+}
+
+.row1-backboards .backboard-grey, .row2-backboards .backboard-grey {
+  background-color:#7b8796;
+  display:inline-block;
+  height:198px;
+  margin-top:2.564102564102564%;
+  padding:16px 10px;
+  text-decoration:none;
+  border-radius:4px;
+}
+
+.row1-backboards .backboard-grey:hover, .row2-backboards .backboard-grey:hover {
+  background-color:#d3a44a;
+}
+
+.backboards-wrap {
+  text-align:center;
+}
+
+.backboards-wrap:after {
+  clear:both;
+  content:"";
+  display:none;
+  height:0;
+}
+
+.span12.backboards-wrap {
+  margin-left:0;
+}
+
+.row1-backboards ul, .row2-backboards ul {
+  color:#fff;
+  display:table;
+  height:100%;
+  list-style-type:none;
+  margin:0 auto;
+}
+
+.row1-backboards, .row2-backboards {
+  margin-left:0;
+}
+
+.row1-backboards li, .row2-backboards li {
+  display:table-row;
+  font-size:12px;
+  line-height:16px;
+}
+
+.row1-backboards li h5, .row2-backboards li h5 {
+  font-size:16px;
+  font-weight:normal;
+}
+
+.backboards-wrap ul li:first-of-type {
+  height:50%;
+}
+
+#services-tools img {
+  margin-top:2%;
+}

@@ -1,0 +1,39 @@
+#global-sidebar
+  %ul.nav.nav-list#icon-links
+    %li
+      - if controller?(['documents'])
+        = image_tag('tools-small.png', class: "active-img")
+      - else
+        = link_to image_tag('tools-small.png'), documents_path
+    %li
+      - if controller?(%w(resources support_tickets white_papers faqs))
+        = image_tag('doc-small.png', class: "active-img")
+      - else
+        = link_to image_tag('doc-small.png'), resources_path
+    %li
+      - if current_user.admin?
+        - if controller?(['users', 'styles'])
+          = image_tag('gear-small.png', class: "active-img")
+        - else
+          = link_to image_tag('gear-small.png'), edit_user_path(current_user._id)
+      - elsif current_user.role == 'publisher'
+        - if controller?(%w(customers users custom_apis styles))
+          = image_tag('gear-small.png', class: "active-img")
+        - else
+          = link_to image_tag('gear-small.png'), edit_user_path(current_user._id)
+      - else current_user.role == 'consumer'
+        - if controller?(['users', 'styles'])
+          = image_tag('gear-small.png', class: "active-img")
+        - else
+          = link_to image_tag('gear-small.png'), edit_user_path(current_user._id)
+
+    %li
+      - if controller?(['reports'])
+        = image_tag('barchart-small.png', class: "active-img")
+      - else
+        = link_to image_tag('barchart-small.png'), reports_index_path
+    %li
+      - if controller?(['dashboards'])
+        = image_tag('toolbox-small.png', class: "active-img")
+      - else
+        = link_to image_tag('toolbox-small.png'), dashboard_path

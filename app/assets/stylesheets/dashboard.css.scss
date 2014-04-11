@@ -1,0 +1,237 @@
+/* ---------- Sets Two-column Layout ---------- */
+
+#dashboard-wrap {
+}
+
+#dashboard-left-widgets-container {
+  margin:16px 0 0 0;
+}
+
+#dashboard-right-widgets-container {
+  margin-top:16px;
+}
+
+#dashboard-right-widgets-container .placeholder, #dashboard-left-widgets-container .placeholder {
+  background:#7b8796;
+  border:2px dashed #ddd;
+  opacity:0.4;
+  border-radius:4px;
+}
+
+.left-widget, .right-widget {
+  background-color:#EFEFEF;
+  border:1px solid #B7B7B7;
+  margin:0 0 20px 0;
+  position:relative;
+  border-radius:4px;
+}
+
+/* ---------- Generic Formatting ---------- */
+
+.loading {
+  background-image:image-url('spinner.gif');
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+.machineshop-header li.pull-right {
+  margin:0 8px 0 0;
+}
+
+.left-widget td, .right-widget td {
+  color:#666666;
+}
+
+.expand-widget, .collapse-widget, .close_icon, .sync_icon, .edit_link  {
+  cursor: pointer;
+}
+
+.expand-widget, .collapse-widget, .close_icon, .sync_icon {
+  position:absolute;
+  right:0;
+  top:0;
+}
+
+.machineshop-header li.expand-widget, .machineshop-header li.collapse-widget {
+  line-height:41px;
+}
+
+.close_icon {
+  right:20px;
+}
+
+.sync_icon {
+  right:40px;
+}
+
+/* ---------- User Profile Widget ---------- */
+
+#user-profile-data h4 {
+  color:#7cb3d8;
+  font-weight:normal;
+  margin:10px;
+}
+
+#user-profile-data ul {
+  list-style-type:none;
+}
+
+#user-profile-data ul li {
+  color:#666666;
+}
+
+#user-profile-data ul li#admin-name,
+#user-profile-data ul li#admin-token,
+#user-profile-data ul li#admin-token ~ p {
+  color:#000000;
+  font-weight:bold;
+}
+
+#user-profile-data ul li.ms-red-text {
+  color:#D32027;
+}
+
+/* ---------- System Status Widget ---------- */
+
+#system-status-data ul {
+  list-style-type:none;
+  margin:10px 0 10px 25px;
+}
+
+#system-status-data ul li {
+  color:#666666;
+}
+
+#system-status-data ul li.date-time {
+  color:#000000;
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* ---------- Api Usage Widget ----------- */
+
+#api-chart {
+  //background:url('api_chart_large.png') center center no-repeat;
+  height:130px;
+}
+
+#api-usage-data td {
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* ---------- Device Report Data Widget ---------- */
+
+#device-report-data tr td:nth-of-type(2) {
+  font-weight:bold;
+}
+
+.btn.btn-custom-msg a {
+  color:#fff;
+  text-decoration:none;
+}
+
+.machineshop-inner-container.device_instances_reports {
+  overflow:scroll;
+}
+
+/* ---------- Device Overview Widget ---------- */
+
+#device-search-box {
+  background:url("magnifier-icon.png") 90% center no-repeat #efefef;
+  background-size:20px 20px;
+  border:1px solid #e6e6e6;
+  box-shadow:none;
+  -moz-box-shadow:none;
+  -o-box-shadow:none;
+  -webkit-box-shadow:none;
+  height:30px;
+  margin:6px 12px;
+  padding:0;
+  padding-left:10px;
+}
+
+#device-search-box ~ input[value=Search] {
+  display:none;
+}
+
+#device-overview-data td a {
+  color:#D32027;
+  text-decoration:underline;
+}
+
+.machineshop-inner-container.device_instances_count {
+  overflow:scroll;
+}
+
+.modal-header h3 {
+  display:inline-block;
+}
+
+.modal-header .btn {
+  float:right;
+}
+
+.modal_device_details {
+  padding-bottom:20px;
+}
+
+/* ---------- System Usage Widget ---------- */
+
+#system-usage-chart {
+  //background:url('system_usage_large.png') center center no-repeat;
+  height:130px;
+}
+
+#system-usage-data td {
+  font-size:12px;
+  font-weight:bold;
+}
+
+#system_usage .machineshop-inner-container, #api_usage .machineshop-inner-container, #rule_management .machineshop-inner-container {
+  overflow:scroll;
+}
+
+/* ---------- User Managment Widget (see users.css.scss) ---------- */
+
+/* ---------- Rule Management Widget ---------- */
+
+#new-rule {
+  margin:6px;
+}
+
+td.rules-list {
+  color:#D32027;
+  cursor:pointer;
+}
+
+.rules-list:hover > p.notice{
+  display:inline-block;
+}
+
+p.notice {
+  background-color:#FFFFFF;
+  border:1px solid #C9C9C9;
+  box-shadow:5px 5px 8px #888888;
+  -moz-box-shadow:5px 5px 8px #888888;
+  -webkit-box-shadow:5px 5px 8px #888888;
+  color:#000000;
+  display:none;
+  margin-right:4%;
+  margin-top:-14px;
+  padding:14px;
+  position:absolute;
+  z-index:99;
+  border-radius:4px;
+}
+
+
+/* --------- Custom Api Widget ---------- */
+
+#add-custom-api {
+  margin:6px;
+}
+
+.machineshop-inner-container.custom_api_management {
+  overflow:scroll;
+}

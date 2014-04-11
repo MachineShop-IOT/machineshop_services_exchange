@@ -1,0 +1,17 @@
+- if customers && customers.length > 0
+  - customers.each do |u|
+    %tr.customer_info{'data-customer_id' => u._id}
+      %td.loading
+      %td
+        = u.email
+      %td
+      %td
+      %td
+- else
+  %tr.customer_info
+    %td
+    %td
+      (no results)
+    %td
+    %td
+    %td

@@ -1,0 +1,6 @@
+%td
+%td= device_instance_count[0]
+%td
+  %a{:href => "#device_instance_detail", 'data-toggle' => 'modal', :onclick => "javascript:$('.modal_device_details').text('#{device_instance.to_s}')"}
+    = device_instance_count[1]
+%td= device_instance_count[2]

@@ -1,0 +1,22 @@
+#login.login
+  %div
+    #login-nofloat.span4
+      = form_for @user_session, url: user_session_path do |f|
+        %div
+          %p.span12 Login to your account
+          - if @user_session.errors[0] == "Invalid email."
+            %div{:style => "color:red; font-style:italic; float:left;"}
+              Invalid Email
+          = f.text_field :email, class: "input-block-level", placeholder: "Email address"
+        %div
+          - if @user_session.errors[0] == "Invalid password."
+            %div{:style => "color:red; font-style:italic; float:left;"}
+              Invalid Password
+          = f.password_field :password, class: "input-block-level", placeholder: "Password"
+        #login-btn-container
+          = f.submit 'Login', {:class => "btn-large btn-custom-large btn-login", :id => "login-btn"}
+        %div
+          = check_box_tag 'remember'
+          = label_tag 'Remember me'
+        %div
+          = link_to 'Forgot your password?', '#'

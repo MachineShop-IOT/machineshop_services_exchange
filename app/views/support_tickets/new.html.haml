@@ -1,0 +1,34 @@
+.span10#submit-ticket-wrap
+  .row-fluid.span12
+    %h3.span5 Submit a Ticket
+
+  %p.span12.no-margin-left Submit a ticket to our support staff. We will respond to you quickly.
+  .span12.backboard-light-grey.no-margin-left#support-ticket-form
+    = form_tag(support_tickets_path, method: :post) do
+      .span7
+        .form_label.span4
+          = "Your Email Address"
+
+        .form_field.span12.no-margin-left
+          = text_field_tag 'email', current_user.email, class: 'input-block-level', :disabled => true
+
+      .span4#include-list
+        %p Be sure to include:
+        %ul
+          %li Steps to reproduce
+          %li Anything that will help us reproduce
+
+      .row-fluid.span7
+        .form_label.span3
+          = "Subject"
+        .form_field.span12.no-margin-left
+          = text_field_tag 'subject', nil, class: 'input-block-level'
+      .row-fluid.span12
+        .form_label.span3
+          = "Message"
+        .form_field.span11.no-margin-left#message-wrap
+          = text_area_tag 'message', nil, class: 'input-block-level'
+      .row-fluid.span11
+        #save-cancel
+          = link_to 'Cancel', support_tickets_path
+          = submit_tag 'Submit', class: 'btn-large btn-custom-large'

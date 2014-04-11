@@ -1,0 +1,142 @@
+// this form is for admins creating/updating users, or 'My Settings' all users
+= form_for @user, html: {autocomplete: "off", class: "edit_user", :multipart => true} do |f|
+  - if flash[:notice]
+    .span10.no-margin-left{style: "padding-top:10px;"}
+      .alert.alert-danger
+        %p= flash[:notice]
+  .span12
+    .error.ms-red-text
+      = f.object.error
+  .row-fluid.span10
+    .span3
+      .form_label
+        = f.label :first_name
+    .span9
+      .form_field
+        = f.text_field :first_name, class: "input-block-level"
+  .row-fluid.span10
+    .span3
+      .form_label
+        = f.label :last_name
+    .span9
+      .form_field
+        = f.text_field :last_name, class: "input-block-level"
+  .row-fluid.span10
+    .span3
+      .form_label
+        = f.label :password
+    .span9
+      .form_field
+        = f.password_field :password, class: "input-block-level"
+  .row-fluid.span10
+    .span3
+      .form_label
+        = f.label :email
+    .span9
+      .form_field
+        = f.text_field :email, class: "input-block-level"
+  .row-fluid.span10
+    .span3
+      .form_label
+        = f.label :phone_number
+    .span9
+      .form_field
+        = f.text_field :phone_number, class: "input-block-level"
+  .row-fluid.span10
+    .span3
+      .form_label
+        = f.label :company_name
+    .span9
+      .form_field
+        = f.text_field :company_name, class: "input-block-level"
+  - if current_user.role == 'publisher' || current_user.role == 'admin'
+    .row-fluid.span10
+      .span3
+        .form_label
+          = f.label :logo
+      .span9
+        .form_field
+          = file_field_tag :logo_upload
+          - if !@user.logo_url.blank?
+            %img{src: @user.logo_url}
+  .row-fluid.span10
+    .span3
+      .form_label
+        = f.label :notification_method
+    .span9
+      .form_field
+        = f.select :notification_method, [['SMS', "sms"], ['Email', "email"]], {}, {class: "input-block-level custom-select"}
+
+  - if current_user.admin?
+    .row-fluid.span10
+      .span3
+        .form_label
+          = f.label :role
+      .span9
+        .form_field
+          = f.select :role, [['Admin', "admin"], ['Publisher', "publisher"], ['Consumer', "consumer"]], {}, {class: "input-block-level custom-select"}
+
+    .row-fluid.span10
+      #save-cancel-top
+        = link_to("Cancel", users_url)
+        = f.submit "Save Changes", :class => 'btn-large btn-custom-large'
+
+    .row-fluid.span10#assign-services
+      .span3
+        %p Assign Services
+    .span12#check-boxes-wrap
+      .row-fluid.span12.no-margin-left
+        .span10
+          %span.checkmark_routes_all
+            .form_field
+              %input#master_checkbox{:onclick => "toggleChecked(this.checked)", :type => "checkbox"}
+            .form_label
+              %label{:for => "check_all"} Select / Deselect All
+        .span2#expand-collapse-all
+          = image_tag('expand_all.png', id: 'expand-all', onclick: 'showAllRoutes()')
+          = image_tag('collapse_all.png', id: 'collapse-all', onclick: 'hideAllRoutes()')
+      .row-fluid.span12.no-margin-left
+        %div#routes_container
+          - categorized_routes_hash.each do |resource, routes|
+            .span12.no-margin-left.resource-name
+              .span10
+                - if resource == 'google'
+                  %h4= resource.upcase
+                - else
+                  %h4= resource.gsub('_', ' ').pluralize.upcase
+              .span2
+                %h4.show-hide-routes{ onclick: "toggleRoutesCategory(this)", data: { resource: resource } } +
+            .span12.no-margin-left.routes-by-resource{ data: { category: resource } }
+              - routes.each do |route|
+                %ul.span6.no-margin-left
+                  %li.span1.form_field.checkmark_routes{ style: "margin-left:10px;" }
+                    - if (@user.role == "admin" or @method == :post) && route == "PUT/user/:id"
+                      = hidden_field_tag "user[authorized_routes][]", route, {id: "put_user__id_hidden"}
+                      = check_box_tag "user[authorized_routes][]", route, true, {disabled: true, id: "#{route.gsub(/(\W|\d)/, '_').downcase}"}
+                    - elsif (@user.role == "admin" or @method == :post) && route == "GET/routes"
+                      = hidden_field_tag "user[authorized_routes][]", route, {id: "get_routes_hidden"}
+                      = check_box_tag "user[authorized_routes][]", route, true, {disabled: true, id: "#{route.gsub(/(\W|\d)/, '_').downcase}"}
+                    - elsif (@user.role == "publisher") && route == "PUT/customer/:id"
+                      = hidden_field_tag "user[authorized_routes][]", route, {id: "put_customer__id_hidden"}
+                      = check_box_tag "user[authorized_routes][]", route, true, {disabled: true, id: "#{route.gsub(/(\W|\d)/, '_').downcase}"}
+                    - elsif route == "GET/api_docs"
+                      = hidden_field_tag "user[authorized_routes][]", route
+                      = check_box_tag "user[authorized_routes][]", route, true, {disabled: true, id: "#{route.gsub(/(\W|\d)/, '_').downcase}"}
+                    - else
+                      = hidden_field_tag "user[authorized_routes][]", "", id: "put_user__id_hidden" if route == "PUT/user/:id"
+                      = check_box_tag "user[authorized_routes][]", route, @user.authorized_routes ? @user.authorized_routes.include?(route) : false, {id: "#{route.gsub(/(\W|\d)/, '_').downcase}"}
+                  %li.span10.form_label.route-labels
+                    = label_tag(route, route)
+
+    .row-fluid.span12
+      #save-cancel
+        = link_to("Cancel", users_url)
+        = f.submit "Save Changes", :class => 'btn-large btn-custom-large'
+  - else
+    .row-fluid.span10
+      #save-cancel
+        - if current_user.role == 'consumer'
+        - else
+          = link_to("Cancel", users_url)
+        = f.submit "Save Changes", :class => 'btn-large btn-custom-large'
+

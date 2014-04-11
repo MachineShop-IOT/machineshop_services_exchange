@@ -1,0 +1,64 @@
+- if !controller?(%w(dashboards welcomes))
+  .sidebar-nav#variable-sidebar
+    - if controller?(['documents'])
+      = render 'shared/services_sidebar'
+    - elsif controller?(%w(resources support_tickets white_papers faqs example_applications))
+      = render 'shared/resources_sidebar'
+    -elsif controller?(['reports'])
+      = render 'shared/reports_sidebar'
+
+    - elsif controller?(%w(users customers custom_apis styles))
+      - if current_user.role == 'admin'
+        %h4 Admin
+        %p Configure your account and manage your users and their access to the services.
+      - elsif current_user.role == 'publisher'
+        %h4 Manage
+        %p Configure your account and manage your customers and their access to the services.
+      - else current_user.role == 'consumer'
+        %h4 My Settings
+        %p Manage your account and check on your service settings.
+
+      %ul.nav.nav-list
+        - if current_user.role == 'admin'
+          - if controller?(['users']) && params[:id] == current_user.id
+            %li.active-side-nav/
+          - else
+            %li/
+          = link_to 'My Settings', edit_user_path(current_user._id)
+
+          - if controller?(['users']) && params[:id] != current_user.id
+            %li.active-side-nav/
+          - else
+            %li/
+          = link_to 'Manage Users', users_url
+
+          - if controller?(['styles'])
+            %li.active-side-nav/
+          - else
+            %li/
+          = link_to "Custom UI", styles_path
+
+        - if current_user.role == 'publisher'
+          - if controller?(['users']) && params[:id] == current_user.id
+            %li.active-side-nav/
+          - else
+            %li/
+          = link_to 'My Settings', edit_user_path(current_user._id)
+
+          - if controller?(['customers']) or (controller?(['users']) && params[:id] != current_user.id)
+            %li.active-side-nav/
+          - else
+            %li/
+          = link_to 'Manage Customers', customers_path
+
+          - if controller?(['custom_apis'])
+            %li.active-side-nav/
+          - else
+            %li/
+          = link_to "Custom API's", custom_apis_path
+
+          - if controller?(['styles'])
+            %li.active-side-nav/
+          - else
+            %li/
+          = link_to "Custom UI", new_style_path

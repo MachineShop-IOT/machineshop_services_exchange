@@ -1,0 +1,6 @@
+%li.pull-right.collapse-widget{ :style => collapsed ? 'display: none;' : 'display: block;' }
+  &minus;
+%li.pull-right.expand-widget{ :style => collapsed ? 'display: block;' : 'display: none;' }
+  +
+%li.pull-right.close_icon= image_tag 'delete_small.png'
+%li.pull-right.sync_icon= image_tag 'sync_small.png'

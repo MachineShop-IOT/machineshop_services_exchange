@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  widget_column1: MyString
+  widget_column2: MyString
+
+two:
+  widget_column1: MyString
+  widget_column2: MyString

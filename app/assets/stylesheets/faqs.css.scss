@@ -1,0 +1,35 @@
+// Place all the styles related to the Faqs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#faq-index-wrapper .dashed-border,
+#faq-index-wrapper .table-it {
+  display:table;
+}
+
+#faq-index-wrapper .dashed-border > [class*='span'],
+#faq-index-wrapper .table-it > [class*='span'] {
+  display:table-cell;
+  float:none;
+  vertical-align:middle;
+}
+
+#add-faq {
+  float:none;
+}
+
+#edit-delete-faq {
+  text-align:center;
+}
+
+.reveal-btn, .faq-question {
+  display:inline-block;
+}
+
+.reveal-btn {
+  background:url('reveal-btn.png') no-repeat;
+  cursor:pointer;
+  height:22px;
+  margin:0 0 -3px 5px;
+  width:22px;
+}

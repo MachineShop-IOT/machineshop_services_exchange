@@ -1,0 +1,13 @@
+- if rules && rules.length > 0
+  - rules.each do |r|
+    %tr.rule_info{'data-rule_id' => r._id}
+      %td.loading
+      %td
+        = r.description
+      %td
+- else
+  %tr.rule_info
+    %td
+      (no results)
+    %td
+    %td

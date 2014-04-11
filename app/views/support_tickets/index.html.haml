@@ -1,0 +1,36 @@
+.span10#all-tickets-wrapper
+  .span12.row-fluid
+    %h3.span5 All Tickets
+
+  - if @tickets.length == 0
+    .span12.no-margin-left.dashed-border
+      (no tickets)
+  - else 
+    - @tickets.each do |ticket|
+      .span12.no-margin-left.dashed-border
+        .span8
+          
+          %h4 
+            = link_to ticket.subject, support_ticket_path(ticket.id)
+          %p.username
+            %span{:class => status_class[ticket.status.downcase]}
+              = ticket.status.upcase
+            = " | "
+            %span.local-time
+              = format_time(ticket.created_at)
+        .span4
+          %ul.blue-dot-background.img-rounded
+            %li
+              %em Last Reply
+            %li 
+              - ticket.last_audit[:events].each do |event|
+                = @users[event[:author_id]] if event[:type] == "Comment"
+            %li 
+              %span.local-time
+                = format_time(ticket.last_audit[:created_at])
+            
+  .span12.no-margin-left.dashed-border
+    
+
+
+  

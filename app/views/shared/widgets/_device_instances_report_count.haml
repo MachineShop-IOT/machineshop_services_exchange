@@ -1,0 +1,9 @@
+- device_instances.each do |di|
+  %tr.report_count{'data-device_id' => di._id}
+    %td= di.device[:model]
+    /count_object = [device._id, device.name, device.total_reports(current_user)[:count]]
+    %td= di._id
+    %td
+      %a{:href => "#device_instance_detail", 'data-toggle' => 'modal', :onclick => "javascript:$('.modal_device_details').html('#{display_json(di.marshal_dump)}')"}
+        = di.name
+    %td= di.report_count

@@ -1,0 +1,78 @@
+.span10#edit-user-wrap
+  .row-fluid
+    - if @user.id == current_user.id
+      %h3.span5 My Settings
+      %p.span11.no-margin-left Change your basic account settings and password
+      .row-fluid.span12.no-margin-left.dashed-border
+      .row-fluid.span10.no-margin-left
+        .span3
+          Access Code
+        .span9
+          = current_user.authentication_token
+      .row-fluid.span10.no-margin-left
+        .span3
+          Number of Logins
+        .span9
+          %p
+            %span= current_user.sign_in_count
+            %span ( last login:
+            %span.local-time= current_user.last_sign_in_at ? format_time(current_user.last_sign_in_at) : "(none)"
+            %span )
+      .row-fluid.span10.no-margin-left
+        .span3
+        .span9
+          = link_to "Get New Access Code", new_api_key_path(current_user.id), class: "btn btn-warning"
+          %span.ms-red-text{ style: "text-align:left;"}
+            WARNING: This will require you to login again.
+
+      .row-fluid
+        .span12
+          = render 'form'
+
+      - unless current_user.admin?
+        .row-fluid.span12.no-margin-left
+          %h4 My Services
+        .span12.no-margin-left.dashed-border{style: "min-height:5px;"}
+        .span12.no-margin-left#services-list
+          - categorized_routes_hash.each do |resource, routes|
+            .span12.no-margin-left
+              - if resource == 'google'
+                %h5= resource.upcase
+              - else
+                %h5= resource.gsub('_', ' ').pluralize.upcase
+            - routes.each do |route|
+              .span6.available-services.no-margin-left
+                = route
+            .span12.no-margin-left.dashed-border-special
+
+    - else
+      - if current_user.admin?
+        %h3.span5 Edit User
+      .row-fluid.span11.no-margin-left.dashed-border
+        .span3
+          %h4
+            = @user.full_name
+      .row-fluid.span10.no-margin-left
+        .span3
+          Access Code
+        .span9
+          .span6#auth-token
+            = @user.authentication_token
+          .span6
+            .btn.btn-warning.pull-right#new-api-key-btn{ onclick: "resetApiKey(this)", data: { id: @user.id } }
+              Generate New Access Code
+      .row-fluid.span10.no-margin-left
+        .span3
+          Number of logins
+        .span9
+          - if @user.sign_in_count == 0
+            = "#{@user.sign_in_count} (last login: #{@user.full_name} has never signed in)"
+          - else
+            %p
+              %span= @user.sign_in_count
+              %span ( last login:
+              %span.local-time= @user.last_sign_in_at ? format_time(@user.last_sign_in_at) : "(none)"
+              %span )
+      .row-fluid
+        .span12
+          = render 'form'

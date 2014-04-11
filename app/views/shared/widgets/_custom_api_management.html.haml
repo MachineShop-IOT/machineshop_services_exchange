@@ -1,0 +1,51 @@
+- if controller?(['dashboards'])
+  %ul.machineshop-header
+    %li /
+    %li CUSTOM API
+    = render partial: 'shared/header_buttons', locals: {collapsed: collapsed}
+  .machineshop-inner-container.custom_api_management{ :style => collapsed ? 'display: none;' : '' }
+    %ul.add-record#add-custom-api
+      %li= link_to image_tag('add-btn.png'), new_custom_api_path
+      %li= link_to "Add", new_custom_api_path
+    .table_container
+      .row-fluid
+        %table.table.table-striped#custom-api-management
+          %thead
+            %tr
+              %th NAME
+              %th BASE DOMAIN
+              %th ENDPOINT
+              %th DATE CREATED
+              %th ACTIONS
+          %tbody.paged_data
+            %tr
+              %td.loading
+              %td
+                Loading...
+              %td
+              %td
+              %td
+
+    .row-fluid.no-margin-left
+      = render 'shared/pager'
+
+- else
+  .row-fluid
+    %table.table.table-bordered.table-striped#custom-api-management
+      %thead
+        %tr
+          %th NAME
+          %th BASE DOMAIN
+          %th ENDPOINT
+          %th DATE CREATED
+          %th ACTIONS
+      %tbody.paged_data
+        %tr
+          %td.loading
+          %td
+            Loading...
+          %td
+          %td
+          %td
+  .row-fluid.no-margin-left
+    = render 'shared/pager'

@@ -1,0 +1,11 @@
+.span10#user-index-wrap
+  .row-fluid
+    %h3.span5 Manage Users
+  .row-fluid.no-margin-left
+    %p.span7.no-margin-left Manage subusers, set services, view and set basic account settings.
+    .span2.pull-right
+      %ul.add-record#add-user
+        %li= link_to image_tag('add-btn.png'), new_user_path
+        %li= link_to "Add", new_user_path
+  .user_management
+    = render partial: "shared/widgets/user_management", locals: { collapsed: false }

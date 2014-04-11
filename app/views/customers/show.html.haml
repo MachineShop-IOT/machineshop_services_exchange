@@ -1,0 +1,23 @@
+.row-fluid
+  .span9.right-widget.profile
+    %ul.machineshop-header
+      %li= image_tag 'user_small.png'
+      %li Customer Profile
+    .machineshop-inner-container
+      %h4= @customer.company_name
+      %ul
+        %li#admin-name= @customer.full_name
+        %li.ms-red-text= link_to @customer.email, "mailto:#{@customer.email}"
+        %li= "Sign-In Count: #{@customer.sign_in_count}"
+        %li
+          %span Last Sign-in:
+          - if @customer.sign_in_count == 0
+            %span (none)
+          - else
+            %span.local-time= @customer.last_sign_in_at ? format_time(@customer.last_sign_in_at) : "(none)"
+        %li= "Sign-In IP: #{@customer.current_sign_in_ip}"
+        %li= "Phone Number: #{@customer.phone_number}"
+        - unless !@customer.notification_method
+          %li= "Notification Method: #{@customer.notification_method.humanize}"
+        %li#admin-token= "Access Token: #{@customer.authentication_token}"
+

@@ -1,0 +1,11 @@
+.span10#customer-index-wrap
+  .row-fluid
+    %h3.span5 Manage Customers
+  .row-fluid.no-margin-left
+    %p.span6.no-margin-left Manage customers, set services, view and set basic account settings.
+    .span2.pull-right
+      %ul.add-record#add-customer
+        %li= link_to image_tag('add-btn.png'), new_customer_path
+        %li= link_to 'Add', new_customer_path
+  .customer_management
+    = render partial: 'shared/widgets/customer_management', locals: { collapsed: false }

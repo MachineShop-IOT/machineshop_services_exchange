@@ -1,0 +1,10 @@
+%input#user_id{:name => "user_id", :type => "hidden", :value => "#{current_user.id}"}
+.span10#dashboard-wrap
+  .span4.column#dashboard-left-widgets-container
+    - @col1.each do |user_widget|
+      .left-widget.dragbox{id: "#{user_widget.widget.name}", "data-widget_id" => "#{user_widget.widget.id}"}
+        = render partial: "shared/widgets/#{user_widget.widget.name}", locals: {collapsed: user_widget.collapsed}
+  .span8.column#dashboard-right-widgets-container
+    - @col2.each do |user_widget|
+      .right-widget.dragbox{id: "#{user_widget.widget.name}", "data-widget_id" => "#{user_widget.widget.id}"}
+        = render partial: "shared/widgets/#{user_widget.widget.name}", locals: {collapsed: user_widget.collapsed}

@@ -1,0 +1,25 @@
+.document{ id: "document-#{document._id}" }
+  .span12.api-method
+    %h3= document.category
+    %h5= document.end_point
+  - unless document.parameters.blank?
+    .row-fluid
+      %table.table.table-striped.table-bordered
+        %thead
+          %tr
+            %th Parameter Name
+            %th Parameter Type
+        %tbody
+          - document.parameters.each do |name, value|
+            %tr
+              %td= name
+              %td= value
+
+  #sample-code-wrap
+    .span12.sample-code
+      %h5 Example Data:
+      %p= raw document.return_example
+
+    .span12.sample-code.no-margin-left
+      %h5 Sample Ruby Code:
+      = raw document.example_code

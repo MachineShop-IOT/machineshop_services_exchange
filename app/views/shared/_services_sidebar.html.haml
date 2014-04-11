@@ -1,0 +1,18 @@
+#services-sidebar
+  %h4 Services
+  %p All the information you need to utilize our API services in your application.
+  - if @search_results
+    %div{id: "#{@search_results}"}
+      %h4 Search Results
+      = link_to 'All Docs', documents_path, id: 'close-search'
+      %ul.nav.nav-list
+        - @document_categories.each do |category_name, documents|
+          %li
+            %a.category-name= category_name
+  - else
+    %ul.nav.nav-list#services
+      - @category_names.each do |category_name|
+        %li
+          %a{ class: "category-name", name: category_name }= category_name
+
+

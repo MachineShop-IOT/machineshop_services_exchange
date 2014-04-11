@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>module ApiCalls - App Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/api_calls.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-get_user">#get_user</a>
+    
+    <li><a href="#method-i-get_users">#get_users</a>
+    
+    <li><a href="#method-i-platform_request">#platform_request</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./MachineshopPortal.html">MachineshopPortal</a>
+  
+    <li><a href="./MachineshopPortal/Application.html">MachineshopPortal::Application</a>
+  
+    <li><a href="./AdminController.html">AdminController</a>
+  
+    <li><a href="./AdminHelper.html">AdminHelper</a>
+  
+    <li><a href="./ApiCalls.html">ApiCalls</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CustomersController.html">CustomersController</a>
+  
+    <li><a href="./CustomersHelper.html">CustomersHelper</a>
+  
+    <li><a href="./Dashboard.html">Dashboard</a>
+  
+    <li><a href="./DashboardHelper.html">DashboardHelper</a>
+  
+    <li><a href="./DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="./DeviceInstance.html">DeviceInstance</a>
+  
+    <li><a href="./Document.html">Document</a>
+  
+    <li><a href="./DocumentsController.html">DocumentsController</a>
+  
+    <li><a href="./DocumentsHelper.html">DocumentsHelper</a>
+  
+    <li><a href="./MachineShopApi.html">MachineShopApi</a>
+  
+    <li><a href="./Report.html">Report</a>
+  
+    <li><a href="./ReportsController.html">ReportsController</a>
+  
+    <li><a href="./ReportsHelper.html">ReportsHelper</a>
+  
+    <li><a href="./Rule.html">Rule</a>
+  
+    <li><a href="./RulesController.html">RulesController</a>
+  
+    <li><a href="./RulesHelper.html">RulesHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserSession.html">UserSession</a>
+  
+    <li><a href="./UserSessionsController.html">UserSessionsController</a>
+  
+    <li><a href="./UserWidget.html">UserWidget</a>
+  
+    <li><a href="./UserWidgetsController.html">UserWidgetsController</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WelcomesController.html">WelcomesController</a>
+  
+    <li><a href="./Widget.html">Widget</a>
+  
+    <li><a href="./WidgetPermission.html">WidgetPermission</a>
+  
+    <li><a href="./WidgetsController.html">WidgetsController</a>
+  
+    <li><a href="./WidgetsHelper.html">WidgetsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module ApiCalls</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="HEADERS">HEADERS
+        
+        <dd class="description">
+        
+      
+        <dt id="STAGE_PLATFORM_API">STAGE_PLATFORM_API
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-get_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_user</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_user-source">
+            <pre><span class="ruby-comment"># File lib/api_calls.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_user</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-node">&quot;user/#{id}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_user-method -->
+
+    
+      <div id="method-i-get_users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_users</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_users-source">
+            <pre><span class="ruby-comment"># File lib/api_calls.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_users</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_users-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_users-method -->
+
+    
+      <div id="method-i-platform_request" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">platform_request</span><span
+            class="method-args">(endpoint)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>def delete_rule(id)</p>
+
+<pre>url = &quot;#{STAGE_PLATFORM_API}/rule/#{id}&quot;
+RestClient.delete url, HEADERS</pre>
+
+<p>end</p>
+          
+
+          
+          <div class="method-source-code" id="platform_request-source">
+            <pre><span class="ruby-comment"># File lib/api_calls.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">platform_request</span>(<span class="ruby-identifier">endpoint</span>)
+  <span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;#{STAGE_PLATFORM_API}#{endpoint}&quot;</span>
+  <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">get</span> <span class="ruby-identifier">url</span>, <span class="ruby-constant">HEADERS</span>
+  <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>, <span class="ruby-value">:symbolize_names</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- platform_request-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- platform_request-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,0 +1,26 @@
+.span10#ideas-wrap
+  %h3 Ideas &amp; Examples
+  %p Quickly become an expert on using our services with the tutorials and information. You will also see some very helpful sample applciation we have developed and you can freely use as models or tutorials for your application.
+
+  .span12.backboards-wrap.row1-backboards
+    = link_to faqs_path, class: 'span4 backboard-grey tall-backboard' do
+      %ul
+        %li
+          = image_tag('question.png')
+        %li
+          %h5 FAQ
+        %li View our Frequently Asked Questions
+    = link_to white_papers_path, class: 'span4 backboard-grey tall-backboard' do
+      %ul
+        %li
+          = image_tag('document-clear.png')
+        %li
+          %h5 Getting Started and White Papers
+        %li Helpful information and some tutorials on using the services for your application
+    = link_to example_applications_path, class: 'span4 backboard-grey tall-backboard' do
+      %ul
+        %li
+          = image_tag('sample-app.png')
+        %li
+          %h5 Example Applications
+        %li Helpful applications available in source code to help

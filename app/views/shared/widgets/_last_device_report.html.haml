@@ -1,0 +1,33 @@
+%ul.machineshop-header
+  %li= image_tag 'computer_small.png'
+  %li LAST DEVICE REPORT DATA
+  = render partial: 'shared/header_buttons', locals: {collapsed: collapsed}
+.machineshop-inner-container.device_instances_reports{ :style => collapsed ? 'display: none;' : '' }
+  .table_container
+    %table.table.table-striped#device-report-data
+      %thead
+        %tr
+          %th Date/Time
+          %th Device Name
+          %th Device Type
+          %th Last Message
+      %tbody.paged_data
+        %tr
+          %td.loading
+          %td
+            Loading...
+          %td
+          %td
+
+  = render 'shared/pager'
+
+#report_detail.modal.hide.fade{:style => "display: none;"}
+  .modal-header
+    %a.close{'data-dismiss'=>"modal"}
+    %h3 Report Detail
+
+  .modal-body{:style => "height: 350px; overflow-y: scroll;"}
+    %p.modal_report_details
+  .modal-footer
+    %a.btn{:href=>"#", 'data-dismiss'=>"modal"}
+      Close

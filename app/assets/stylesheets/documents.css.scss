@@ -1,0 +1,192 @@
+// Place all the styles related to the documents controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#documentation-wrap > .row-fluid:first-of-type {
+  display:table;
+}
+
+#documentation-wrap .endpoint-select,
+.doc-info,
+.edit-document {
+  display:none;
+  margin-left:0;
+}
+
+#documentation-wrap > a.span8,
+#documentation-wrap > .doc-info.span8,
+#documentation-wrap > .doc-info,
+#category-desc {
+  min-height:0;
+}
+
+[id*='doc-info-'].doc-info {
+  margin-left:0;
+}
+
+#documentation-wrap h3 {
+  font-weight:normal;
+}
+
+#api-search-wrap {
+  display:table-cell;
+  float:none;
+}
+
+#api-search-box {
+  background:url("magnifier-icon.png") 90% center no-repeat #fff;
+  background-size:20px 20px;
+  border:1px solid #e6e6e6;
+  box-shadow:none;
+  -moz-box-shadow:none;
+  -o-box-shadow:none;
+  -webkit-box-shadow:none;
+  height:30px;
+  margin-bottom:0;
+  padding:0;
+  padding-left:10px;
+}
+
+#api-search-box ~ input[value=Search] {
+  display:none;
+}
+
+.span12.api-method {
+  margin-left:0;
+}
+
+.api-method h4 {
+  display:inline-block;
+  font-weight:normal;
+  margin-bottom:0;
+}
+
+.api-method > h5:first-of-type {
+  margin-top:15px;
+}
+
+.api-method p {
+  margin:4px 0;
+}
+
+.api-method p:last-of-type {
+  margin-bottom:20px;
+}
+
+.api-method > textarea {
+  margin:0 0 20px;
+  border-radius:0;
+}
+
+.edit-doc-link {
+  margin-left:2%;
+  text-decoration:underline;
+}
+
+.edit-doc-link:hover {
+  cursor:pointer;
+}
+
+.api-method input {
+  float:right;
+  margin-bottom:10px;
+  margin-left:2%;
+}
+
+.save-cancel {
+  float:right;
+  padding:20px 0;
+}
+
+.save-cancel > :first-child {
+  margin-right:10px;
+}
+
+.cancel-edit-doc {
+  cursor:pointer;
+}
+
+.sample-code {
+  border:1px solid #e6e6e6;
+  margin:15px 0;
+  overflow:auto;
+  padding:10px;
+  border-radius:3px;
+}
+
+.sample-code-edit {
+  margin:0 0 15px;
+  overflow:auto;
+}
+
+.api-method ~ table {
+  margin:15px 0;
+}
+
+pre {
+  background-color:#fff;
+  border:none;
+}
+
+.document:after, .edit-document:after {
+  clear:both;
+  content:"";
+  display:block;
+  height:0;
+}
+
+.document-menu-item {
+  cursor:pointer;
+}
+
+.endpoint-select {
+  display:table-cell;
+  float:none;
+}
+
+#search_results {
+  background-color:white;
+  display:none;
+}
+
+#search_results h4 {
+  color:#d3a44a;
+  display:inline-block;
+  margin-bottom:0;
+  padding-left:15px;
+  padding-top:0;
+}
+
+#close-search {
+  display:inline-block;
+  text-decoration:underline;
+}
+
+#search_results ul li a {
+  background:none;
+  color:#b3b3b3;
+}
+
+#search_results ul li a:hover {
+  color:#d3a44a !important;
+}
+
+.add-record.add-param {
+  float:none;
+}
+
+.remove-btn {
+  text-align:right;
+}
+
+.params-table tr td {
+  vertical-align:middle;
+}
+
+.params-table tr td input {
+  margin-bottom:0;
+}
+
+.params-table tr td:last-of-type {
+  text-align:center;
+}

@@ -1,0 +1,45 @@
+.document{ id: "document-#{document._id}" }
+  .span12.api-method
+    %h4= document.end_point
+    - if current_user.admin?
+      %a{ class: "edit-doc-link", data: {id: "edit-#{document._id}"} } Edit
+    - if current_user.publisher? && (document.category == "Custom" || document.user_id == current_user.id)
+      %a{ class: "edit-doc-link", data: {id: "edit-#{document._id}"} } Edit Custom Endpoint
+    %h5 Category:
+    %p= document.category
+    %h5 Description:
+    %p= document.description
+
+  .row-fluid
+    - if document.parameters.blank?
+      .row-fluid
+        %table.table.table-striped.table-bordered
+          %thead
+            %tr
+              %th Parameter Name
+              %th Parameter Type
+          %tbody
+            %tr
+              %td No Parameters
+              %td No Parameters
+    - else
+      %table.table.table-striped.table-bordered
+        %thead
+          %tr
+            %th Parameter Name
+            %th Parameter Type
+        %tbody
+          - document.parameters.each do |name, value|
+            %tr
+              %td= name
+              %td= value
+
+  .span12.sample-code.no-margin-left
+    %h5 Example Data:
+    %p= raw document.return_example
+
+  .span12.sample-code.no-margin-left
+    %h5 Sample Ruby Code:
+    = raw document.example_code
+
+= render partial: 'form', locals: {document: document}

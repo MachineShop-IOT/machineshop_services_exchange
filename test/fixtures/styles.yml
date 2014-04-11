@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  link_color: MyString
+  link_hover_color: MyString
+
+two:
+  link_color: MyString
+  link_hover_color: MyString

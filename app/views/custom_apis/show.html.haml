@@ -1,0 +1,17 @@
+.span9#show-custom-api-wrap
+  .row-fluid
+    %h3.span4 Custom Api Profile
+
+  .row-fluid.no-margin-left.dashed-border
+    .span6.right-widget.profile
+      %ul.machineshop-header
+        %li /
+        %li Custom Api Profile
+      .machineshop-inner-container
+        %h4= @custom_api.name.gsub('_', ' ').capitalize
+        %ul
+          %li= "Base Domain: #{@custom_api.base_domain}"
+          %li= "Encrypted Base Domain: #{@custom_api.encrypted_base_domain}"
+          %li= "Protocol: #{@custom_api.protocol}"
+          %li= "Service Type: #{@custom_api.service_type}"
+          %li= "Created On: #{format_time(@custom_api.created_at)}"

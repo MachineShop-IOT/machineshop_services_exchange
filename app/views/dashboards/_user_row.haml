@@ -1,0 +1,13 @@
+%td 
+  = user_instance.full_name
+%td 
+  = user_instance.email
+%td 
+  = user_instance.role
+%td 
+  = user_instance.company_name
+%td
+  .btn.btn-mini.btn-custom
+    = link_to("EDIT", users_edit_url)
+  /- if user.id != current_user.id
+  .btn.btn-mini.btn-custom(href="#") DELETE

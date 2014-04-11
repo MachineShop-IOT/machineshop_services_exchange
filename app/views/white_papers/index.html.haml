@@ -1,0 +1,28 @@
+.span10#white-papers-wrapper
+  .span12.row-fluid
+    %h3.span6 Getting Started and White Papers
+
+  .span12.table-it.no-margin-left
+    %p.span10.no-margin-left Helpful information and some tutorials on using the services for your application.
+    - if current_user.admin?
+      .span2
+        %ul.add-record#add-white-paper
+          %li= link_to image_tag('add-btn.png'), new_white_paper_path
+          %li= link_to "Add", new_white_paper_path
+
+  - @white_papers.each do |white_paper|
+    .span12.no-margin-left.white-paper-listing
+      .span12.no-margin-left.dashed-border
+        .span10
+          %h4= white_paper.title
+          %p= white_paper.description
+        .span2.no-margin-left
+          = link_to image_tag('download.png'), white_paper.file.url(:original, false), :target => "_blank"
+      - if current_user.admin?
+        .span12.no-margin-left.edit-delete
+          .span10
+          .span2.no-margin-left
+            = link_to("Edit", edit_white_paper_path(white_paper.id))
+            = link_to("/ Delete", white_paper_path(white_paper.id), class: "delete-white-paper", confirm: "Delete '#{white_paper.title}'?", method: :delete, remote: true)
+
+

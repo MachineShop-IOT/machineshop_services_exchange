@@ -1,0 +1,37 @@
+= form_for @white_paper, :html => { :multipart => true }  do |f|
+
+  .span12
+    .error
+      - if @white_paper.errors.any?
+        #error_explanation
+          %p.ms-red-text= "#{pluralize(@white_paper.errors.count, "error")} prohibited this white_paper from being saved:"
+          %ul
+            - @white_paper.errors.full_messages.each do |msg|
+              %li.ms-red-text= msg
+
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :title
+    .span10
+      .form_field
+        = f.text_field :title, class: 'input-block-level'
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :description
+    .span10
+      .form_field
+        = f.text_area :description, rows: '5', class: 'input-block-level'
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :file
+    .span10
+      .form_field
+        = f.file_field :file, class: 'input-block-level'
+
+  .row-fluid.span12
+    #save-cancel
+      = link_to 'Cancel', white_papers_path
+      = f.submit 'Save', class: 'btn-large btn-custom-large'

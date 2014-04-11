@@ -1,0 +1,24 @@
+%td
+  = custom_api_instance.name.humanize
+%td
+  = custom_api_instance.base_domain.truncate(24)
+%td
+  = "#{custom_api_instance.method.upcase}/#{custom_api_instance.endpoint}"
+%td
+  = format_time(custom_api_instance.created_at)
+%td
+  %span
+    = link_to "Edit", edit_custom_api_path(custom_api_instance.name)
+    %span
+      = link_to "/ Delete", custom_api_path(custom_api_instance.name),
+      class: "delete",
+      confirm: "Delete custom api '#{custom_api_instance.name.humanize}'?",
+      method: :delete,
+      remote: true
+      :javascript
+        $("a.delete").bind("ajax:success", function(evt, data, status, xhr) {
+        $(this).closest("tr").fadeOut(500);
+        });
+        $("a.delete").bind("ajax:error", function(evt, xhr, status, error) {
+        alert("We're sorry but something went wrong. The custom api was not deleted.")
+        });

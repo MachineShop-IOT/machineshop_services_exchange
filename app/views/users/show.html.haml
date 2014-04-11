@@ -1,0 +1,18 @@
+.row-fluid
+  .span9.right-widget.profile
+    %ul.machineshop-header
+      %li= image_tag 'user_small.png'
+      %li User Profile
+    .machineshop-inner-container
+      %h4= @user.company_name
+      %ul
+        %li#admin-name= @user.full_name
+        %li.ms-red-text= link_to @user.email, "mailto:#{current_user.email}"
+        %li= "Sign-In Count: #{@user.sign_in_count}"
+        %li
+          %span Last Sign-in:
+          %span.local-time= @user.last_sign_in_at ? format_time(@user.last_sign_in_at) : "(none)"
+        %li= "Sign-In IP: #{@user.current_sign_in_ip}"
+        %li= "Phone Number: #{@user.phone_number}"
+        %li= "Notification Method: #{@user.notification_method.humanize}"
+        %li#admin-token= "Access Token: #{@user.authentication_token}"

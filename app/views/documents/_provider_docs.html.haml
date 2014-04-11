@@ -1,0 +1,16 @@
+.row-fluid.span12
+  - @document_categories.each do |category_name, documents|
+    .endpoint-select{data: {name: "#{category_name}"}}
+      %h3= category_name
+      %select.span10.custom-select{class: "input-block-level api-docs-select"}
+        - documents.each do |document|
+          %option.document-menu-item{data: {id: document._id}}= document.end_point
+
+  %div.span3#api-search-wrap
+    = form_tag(documents_index_path, :method => :get) do
+      = text_field_tag 'search_string', nil, :placeholder => "Search API Docs...", id: 'api-search-box'
+      = submit_tag "Search", :class => "btn btn-mini"
+
+- @document_categories.map{ |category_name, documents| documents }.flatten.each do |document|
+  .doc-info{ id: "doc-info-#{document._id}"}
+    = render partial: 'doc_info', locals: {document: document}

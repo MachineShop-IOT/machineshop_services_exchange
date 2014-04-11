@@ -1,0 +1,25 @@
+%ul.machineshop-header
+  %li= image_tag 'line_chart_small.png'
+  %li SYSTEM USAGE LAST 30 DAYS
+  = render partial: 'shared/header_buttons', locals: {collapsed: collapsed}
+.machineshop-inner-container{ :style => collapsed ? 'display: none;' : '' }
+  %div#system-usage-chart
+  .table_container
+    %table.table.table-striped#system-usage-data
+      %thead
+        %tr
+          %th Device
+          %th Report Count
+      %tbody
+        %tr
+          %td Justin's GL100
+          %td 2345
+        %tr
+          %td Justin's GL100
+          %td 2345
+        %tr
+          %td Justin's GL100
+          %td 2345
+        %tr
+          %td Justin's GL100
+          %td 2345

@@ -1,0 +1,36 @@
+%ul.machineshop-header
+  %li= image_tag 'phone_small.png'
+  %li DEVICE OVERVIEW
+  = render partial: 'shared/header_buttons', locals: {collapsed: collapsed}
+.machineshop-inner-container.device_instances_count{ :style => collapsed ? 'display: none;' : '' }
+  = form_tag('#', :method => :get) do
+    = text_field_tag 'device-search-box', nil, :placeholder => "Search by Type or Name"
+    = submit_tag "Search", :class => "btn btn-mini"
+    .table_container
+      %table.table.table-striped#device-overview-data
+        %thead
+          %tr
+            %th Device Type
+            %th Device ID
+            %th Device Name
+            %th Report Count
+        %tbody.paged_data
+          %tr
+            %td.loading
+            %td
+              Loading...
+            %td
+            %td
+
+  = render 'shared/pager'
+
+#device_instance_detail.modal.hide.fade{:style => "display: none;"}
+  .modal-header
+    %a.close{'data-dismiss'=>"modal"}
+    %h3 Device Detail
+    %a.btn{:href=>"#", 'data-dismiss'=>"modal"}
+      Close
+  .modal-body{:style => "height: 350px; overflow-y: scroll;"}
+    %p.modal_device_details
+  .modal-footer
+

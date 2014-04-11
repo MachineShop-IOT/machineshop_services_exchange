@@ -1,0 +1,52 @@
+%h4 Resources
+%p Get help here with issues and questions.
+%ul.nav.nav-list
+  - if (controller?(['resources']) && controller.action_name == 'index') or controller?(['support_tickets'])
+    %li.active-side-nav
+      = link_to 'Support', resources_path
+    %ul.nav.nav-list.sub-nav
+      - if controller?(['support_tickets']) && controller.action_name == 'new'
+        %li.active-sub-nav/
+      - else
+        %li/
+      = link_to 'Submit Ticket', new_support_ticket_path
+      - if controller?(['support_tickets']) && controller.action_name == 'index'
+        %li.active-sub-nav/
+      - else
+        %li/
+      = link_to 'Existing Tickets', support_tickets_path
+      %li= link_to 'FAQ', faqs_path
+  - else
+    %li
+      = link_to 'Support', resources_path
+
+  - if (controller?(['resources']) && controller.action_name == 'ideas_examples') or controller?(['white_papers', 'faqs', 'example_applications'])
+    %li.active-side-nav
+      = link_to 'Ideas & Examples', resources_ideas_examples_path
+    %ul.nav.nav-list.sub-nav
+      - if controller?(['faqs'])
+        %li.active-sub-nav/
+      - else
+        %li/
+      = link_to 'FAQ', faqs_path
+      - if controller?(['white_papers'])
+        %li.active-sub-nav/
+      - else
+        %li/
+      = link_to 'Getting Started & White Papers', white_papers_path
+      - if controller?(['example_applications'])
+        %li.active-sub-nav/
+      - else
+        %li/
+      = link_to 'Example Applications', example_applications_path
+  - else
+    %li
+      = link_to 'Ideas & Examples', resources_ideas_examples_path
+
+  - if (controller?(['resources']) && controller.action_name == 'api_documentation')
+    %li.active-side-nav/
+  - else
+    %li/
+  = link_to 'API Documentation', resources_api_documentation_path
+
+

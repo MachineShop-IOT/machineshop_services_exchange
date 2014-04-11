@@ -1,0 +1,17 @@
+- if users && users.length > 0
+  - users.each do |u|
+    %tr.user_info{'data-user_id' => u._id}
+      %td.loading
+      %td 
+        = u.email
+      %td 
+      %td
+      %td
+- else
+  %tr.user_info
+    %td
+    %td 
+      (no results)
+    %td 
+    %td
+    %td

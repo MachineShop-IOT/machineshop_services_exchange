@@ -1,0 +1,26 @@
+%td
+  = user_instance.full_name
+%td
+  %a{:href => "mailto:#{user_instance.email}"}
+    = user_instance.email.truncate(24)
+%td
+  = user_instance.role.humanize
+%td
+  = user_instance.company_name.truncate(24)
+%td
+  %span
+    = link_to("Edit", edit_user_path(user_instance._id))
+  - if user_instance._id != current_user.id
+    %span
+    = link_to "/ Delete", user_instance,
+    class: "delete",
+    confirm: "Delete '#{user_instance.full_name}'?",
+    method: :delete,
+    remote: true
+    :javascript
+      $("a.delete").bind("ajax:success", function(evt, data, status, xhr) {
+      $(this).closest("tr").fadeOut(500);
+      });
+      $("a.delete").bind("ajax:error", function(evt, xhr, status, error) {
+      alert("We're sorry but something went wrong. The user was not deleted.")
+      });

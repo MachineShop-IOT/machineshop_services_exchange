@@ -1,0 +1,29 @@
+.span10#custom-ui-wrap
+  .row-fluid.span12
+    %h3.span5 Customize UI
+  .row-fluid.no-margin-left
+    %p.span6.no-margin-left Manage custom styles
+    / .span2.pull-right
+    /   %ul.add-record#add-style
+    /     %li= link_to image_tag('add-btn.png'), new_style_path
+    /     %li= link_to "Add", new_style_path
+
+  .custom_style_managment
+    .row-fluid
+      %table.table.table-bordered.table-striped#custom-style-management
+        %thead
+          %tr
+            %th Publisher
+            %th Style Name
+            %th Created At
+            %th Actions
+        - @styles.each do |style|
+          %tr
+            %td= find_user(style.user_id, page=1, query=nil, expire_cache=false).full_name
+            %td= style.name
+            %td.local-time= style.created_at
+            %td
+              %span
+                = link_to 'Edit', edit_style_path(style)
+                %span
+                  = link_to '/ Delete', style, method: :delete, data: { confirm: "Delete custom style #{style.name}?" }

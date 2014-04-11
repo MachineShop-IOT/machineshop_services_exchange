@@ -1,0 +1,22 @@
+%ul.machineshop-header
+  %li= image_tag 'battery_small.png'
+  %li SYSTEM STATUS
+  = render partial: 'shared/header_buttons', locals: {collapsed: collapsed}
+.machineshop-inner-container#system-status-data{ :style => collapsed ? 'display: none;' : '' }
+  %ul
+    %li.date-time Monday December 27th, 2012 10:34am CST
+    %li
+      Status:
+      %span.ms-red-text Online
+      %li
+        System Messages:
+        %span.ms-red-text None at this time
+      %li
+        Reports:
+        %span.ms-red-text 1234
+      %li
+        Metered Events:
+        %span.ms-red-text 1,234,567
+      %li
+        Monitored Events:
+        %span.ms-red-text 1,234,567

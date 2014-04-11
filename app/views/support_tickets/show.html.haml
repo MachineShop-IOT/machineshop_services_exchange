@@ -1,0 +1,37 @@
+/"new", "open", "pending", "hold", "solved", "closed"
+
+.span10#all-tickets-wrapper
+  .span12.row-fluid
+    %h3.span5
+      =@ticket.subject
+  .span12.row-fluid
+    %p
+      %span{:class => status_class[@ticket.status.downcase]}
+        = @ticket.status.upcase
+      = " | "
+      %span.local-time.username
+        = format_time(@ticket.created_at)
+    %p
+      
+    - if @ticket.history
+      - @ticket.history.each do |event|
+        - if event
+          .span12.no-margin-left.dashed-border
+            .span8
+              %p 
+                = event[:comment]
+              %p.username
+                = "#{event[:author]} | "
+                %span.local-time
+                  = format_time(event[:created_at])
+
+  - if @ticket.status != "solved"
+    = form_tag("/support_tickets/#{@ticket.id}", :method => :put) do
+      .span12.no-margin-left#response-box
+        %p 
+          My Reply
+        = text_area_tag('comment', nil, :class => "span12", :rows => "8")
+        .row-fluid.span12
+          %div{:id => "save-cancel"}
+            = link_to("Cancel", support_tickets_path)
+            = submit_tag("Submit", :class => 'btn-large btn-custom-large')

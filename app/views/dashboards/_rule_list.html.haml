@@ -1,0 +1,18 @@
+- if rules && rules.length > 0
+  - rules.each do |r|
+    %tr.rule_info{'data-rule_id' => r._id}
+      %td
+        = r.description
+        %p.notice
+          = r.plain_english
+      %td
+        = r.created_at.to_time.strftime("%m/%d/%Y")
+      %td.delete
+        .btn.btn-mini.btn-custom(href="#") DELETE
+        /= link_to image_tag('remove-icon.png', :alt => 'Delete', :title => 'Delete'), rule_path(rule[:_id]), :method => :delete, :data => {:confirm => 'Are you sure?'}
+- else
+  %tr.rule_info
+    %td
+      (no results)
+    %td
+    %td

@@ -1,0 +1,13 @@
+.span10#documentation-wrap
+  %h3 API Documentation
+  %select.custom-select{class: "input-block-level api-docs-library-select"}
+    - @document_categories.each do |category_name, documents|
+      %optgroup{label: "#{category_name}"}
+        - documents.each do |document|
+          %option.document-menu-item{data: {id: document._id}}= document.end_point
+
+  - @document_categories.map{ |category_name, documents| documents }.flatten.each do |document|
+    .doc-info{ id: "doc-info-#{document._id}"}
+      = render partial: 'api_doc_library', locals: {document: document}
+
+

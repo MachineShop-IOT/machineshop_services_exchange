@@ -1,0 +1,25 @@
+%ul.machineshop-header
+  %li= image_tag 'bar_chart_small.png'
+  %li API USAGE LAST 30 DAYS
+  = render partial: 'shared/header_buttons', locals: {collapsed: collapsed}
+.machineshop-inner-container{ :style => collapsed ? 'display: none;' : '' }
+  %div#api-chart
+  .table_container
+    %table.table.table-striped#api-usage-data
+      %thead
+        %tr
+          %th API Name
+          %th Call Count
+      %tbody
+        %tr
+          %td GET /user
+          %td 2345
+        %tr
+          %td GET /report
+          %td 2345
+        %tr
+          %td GET /role
+          %td 2345
+        %tr
+          %td GET /google/geocode
+          %td 2345

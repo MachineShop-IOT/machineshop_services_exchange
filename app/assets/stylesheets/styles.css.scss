@@ -1,0 +1,25 @@
+// Place all the styles related to the Styles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#custom-style-management td {
+  border-radius: 0;
+}
+
+#restore-defaults {
+  float:left;
+  height:32px;
+  line-height:32px;
+  margin-left:2.564102564102564%;
+  padding:20px 0;
+  vertical-align:middle;
+}
+
+#restore-defaults a {
+  cursor:pointer;
+  margin-bottom:0;
+}
+
+#add-style {
+  margin:6px;
+}

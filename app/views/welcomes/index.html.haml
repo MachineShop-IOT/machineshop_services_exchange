@@ -1,0 +1,63 @@
+.span12#padding-buffer
+  .span10#landing-page
+    %h3 MachineShop allows you to connect your data streams to applications in the cloud. Get started with one of these tools.
+
+    .span12.backboards-wrap.row2-backboards
+      = link_to documents_path, class: 'span6 backboard-grey' do
+        %ul
+          %li#services-tools
+            = image_tag('large-tools.png')
+          %li
+            %h5 Services
+          %li Information on all the API services offered including API documentation and helpful information on usage
+
+      = link_to dashboard_path, class: 'span6 backboard-grey' do
+        %ul
+          %li
+            = image_tag 'large-toolbox.png'
+          %li
+            %h5 My Workbench
+          %li A customizable workbench to help with application development and performance tuning
+
+    .span12.backboards-wrap.row1-backboards
+      = link_to reports_index_path, class: 'span4 backboard-grey' do
+        %ul
+          %li
+            = image_tag 'large-barchart.png'
+          %li
+            %h5 Reports &amp; Analytics
+          %li Want to see how your Application is performing? Check these helpful reports and analytical information
+      = link_to resources_path, class: 'span4 backboard-grey' do
+        %ul
+          %li
+            = image_tag('large-docs.png')
+          %li
+            %h5 Resources
+          %li Get help here for issues and view our FAQ
+
+      - if current_user.admin?
+        = link_to users_path, class: 'span4 backboard-grey' do
+          %ul
+            %li
+              = image_tag('large-gear.png')
+            %li
+              %h5 Admin
+            %li Manage your account, retrieve your API keys and establish accounts for new users and set permissions for their access
+      - elsif current_user.publisher?
+        = link_to customers_path, class: 'span4 backboard-grey' do
+          %ul
+            %li
+              = image_tag('large-gear.png')
+            %li
+              %h5 Manage
+            %li Manage your account, retrieve your API keys and establish accounts for new consumers and set permissions for their access
+      - else
+        = link_to edit_user_path(current_user._id), class: 'span4 backboard-grey' do
+          %ul
+            %li
+              = image_tag('large-gear.png')
+            %li
+              %h5 My Settings
+            %li Manage your service settings and preferences
+
+

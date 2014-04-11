@@ -1,0 +1,32 @@
+.span10#edit-customer-wrap
+  .row-fluid
+    %h3.span5 Edit Customer
+
+  .row-fluid.span12.no-margin-left.dashed-border
+    .span3
+      %h4
+        = @customer.full_name
+  .row-fluid.span10.no-margin-left
+    .span3
+      Access Code
+    .span9
+      .span6#auth-token
+        = @customer.authentication_token
+      .span6
+        .btn.btn-warning.pull-right#new-api-key-btn{ onclick: "resetApiKey(this)", data: { id: @customer.id } }
+          Generate New Access Code
+  .row-fluid.span10.no-margin-left
+    .span3
+      Number of logins
+    .span9
+      - if @customer.sign_in_count == 0
+        = "#{@customer.sign_in_count} (last login: #{@customer.full_name} has never signed in)"
+      - else
+        %p
+          %span= @customer.sign_in_count
+          %span ( last login:
+          %span.local-time= format_time(@customer.last_sign_in_at)
+          %span )
+  .row-fluid
+    .span12
+      = render 'form'

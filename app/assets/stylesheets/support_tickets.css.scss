@@ -1,0 +1,77 @@
+#all-tickets-wrapper #save-cancel {
+  padding-right:2%;
+}
+
+#all-tickets-wrapper > .span12.no-margin-left.dashed-border {
+  display:table;
+}
+
+#all-tickets-wrapper > .span12.no-margin-left.dashed-border > [class*='span'] {
+  display:table-cell;
+  float:none;
+  vertical-align:middle;
+}
+
+#all-tickets-wrapper h4 {
+  padding-top:2%;
+}
+
+#include-list {
+  float:right;
+}
+
+#include-list ul {
+  list-style-position:inside;
+  margin:0;
+}
+
+#support-ticket-form {
+  padding:2% 0;
+}
+
+#message-wrap {
+  margin-left:1.621435%;
+}
+
+.username {
+  color:#999;
+  padding-bottom:1%;
+}
+
+#answer-box {
+  background-color:#F2F2F2;
+  margin:3% 3%;
+}
+
+#answer-box p {
+  margin:1%;
+}
+
+.blue-dot-background {
+  //background:url('blue-dot.png') no-repeat center center;
+  background-color: #7bb3d7;
+  color:white;
+  float:right;
+  font-size:11px;
+  height:46px;
+  list-style-type:none;
+  text-align:center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  //width:46px;
+}
+
+.blue-dot-background li:first-of-type {
+  margin-top:8px;
+  vertical-align:bottom;
+}
+
+.blue-dot-background li {
+  line-height:12px;
+}
+
+.reply-background {
+  background-color: #7bb3d7;
+}
+

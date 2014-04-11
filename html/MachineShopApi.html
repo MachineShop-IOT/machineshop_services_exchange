@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class MachineShopApi - App Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/machine_shop_api.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="ApplicationHelper.html">ApplicationHelper</a>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-authenticate">::authenticate</a>
+    
+    <li><a href="#method-c-create_rule">::create_rule</a>
+    
+    <li><a href="#method-c-create_user">::create_user</a>
+    
+    <li><a href="#method-c-delete_rule">::delete_rule</a>
+    
+    <li><a href="#method-c-delete_user">::delete_user</a>
+    
+    <li><a href="#method-c-get_api_docs">::get_api_docs</a>
+    
+    <li><a href="#method-c-get_comparison_rule_conditions">::get_comparison_rule_conditions</a>
+    
+    <li><a href="#method-c-get_customer">::get_customer</a>
+    
+    <li><a href="#method-c-get_customers">::get_customers</a>
+    
+    <li><a href="#method-c-get_device_instance_last_report">::get_device_instance_last_report</a>
+    
+    <li><a href="#method-c-get_device_instance_report_count">::get_device_instance_report_count</a>
+    
+    <li><a href="#method-c-get_device_instance_reports">::get_device_instance_reports</a>
+    
+    <li><a href="#method-c-get_device_instances">::get_device_instances</a>
+    
+    <li><a href="#method-c-get_devices">::get_devices</a>
+    
+    <li><a href="#method-c-get_join_rule_conditions">::get_join_rule_conditions</a>
+    
+    <li><a href="#method-c-get_rule">::get_rule</a>
+    
+    <li><a href="#method-c-get_rules">::get_rules</a>
+    
+    <li><a href="#method-c-get_user">::get_user</a>
+    
+    <li><a href="#method-c-get_users">::get_users</a>
+    
+    <li><a href="#method-c-headers">::headers</a>
+    
+    <li><a href="#method-c-platform_request">::platform_request</a>
+    
+    <li><a href="#method-c-update_user">::update_user</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./MachineshopPortal.html">MachineshopPortal</a>
+  
+    <li><a href="./MachineshopPortal/Application.html">MachineshopPortal::Application</a>
+  
+    <li><a href="./AdminController.html">AdminController</a>
+  
+    <li><a href="./AdminHelper.html">AdminHelper</a>
+  
+    <li><a href="./ApiCalls.html">ApiCalls</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CustomersController.html">CustomersController</a>
+  
+    <li><a href="./CustomersHelper.html">CustomersHelper</a>
+  
+    <li><a href="./Dashboard.html">Dashboard</a>
+  
+    <li><a href="./DashboardHelper.html">DashboardHelper</a>
+  
+    <li><a href="./DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="./DeviceInstance.html">DeviceInstance</a>
+  
+    <li><a href="./Document.html">Document</a>
+  
+    <li><a href="./DocumentsController.html">DocumentsController</a>
+  
+    <li><a href="./DocumentsHelper.html">DocumentsHelper</a>
+  
+    <li><a href="./MachineShopApi.html">MachineShopApi</a>
+  
+    <li><a href="./Report.html">Report</a>
+  
+    <li><a href="./ReportsController.html">ReportsController</a>
+  
+    <li><a href="./ReportsHelper.html">ReportsHelper</a>
+  
+    <li><a href="./Rule.html">Rule</a>
+  
+    <li><a href="./RulesController.html">RulesController</a>
+  
+    <li><a href="./RulesHelper.html">RulesHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserSession.html">UserSession</a>
+  
+    <li><a href="./UserSessionsController.html">UserSessionsController</a>
+  
+    <li><a href="./UserWidget.html">UserWidget</a>
+  
+    <li><a href="./UserWidgetsController.html">UserWidgetsController</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WelcomesController.html">WelcomesController</a>
+  
+    <li><a href="./Widget.html">Widget</a>
+  
+    <li><a href="./WidgetPermission.html">WidgetPermission</a>
+  
+    <li><a href="./WidgetsController.html">WidgetsController</a>
+  
+    <li><a href="./WidgetsHelper.html">WidgetsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MachineShopApi</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="API_URL">API_URL
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-authenticate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">authenticate</span><span
+            class="method-args">(email, password)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="authenticate-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">authenticate</span>(<span class="ruby-identifier">email</span>, <span class="ruby-identifier">password</span>)
+  <span class="ruby-comment"># platform_request('/user_session/user/authenticate', { email: email, password: password }, :post, nil)</span>
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-string">'/platform/user/authenticate'</span>, { <span class="ruby-identifier">email</span><span class="ruby-operator">:</span> <span class="ruby-identifier">email</span>, <span class="ruby-identifier">password</span><span class="ruby-operator">:</span> <span class="ruby-identifier">password</span> }, <span class="ruby-value">:post</span>, <span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- authenticate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- authenticate-method -->
+
+    
+      <div id="method-c-create_rule" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_rule</span><span
+            class="method-args">(user, rule_json)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_rule-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_rule</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">rule_json</span>)
+  <span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;#{API_URL}/platform/rule&quot;</span>
+  <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span> <span class="ruby-identifier">url</span>, <span class="ruby-identifier">rule_json</span>, <span class="ruby-identifier">headers</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+  <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>, <span class="ruby-value">:symbolize_names</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+  <span class="ruby-comment">#platform_request('/platform/rule', rule_json, :post, user.authentication_token)</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create_rule-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create_rule-method -->
+
+    
+      <div id="method-c-create_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_user</span><span
+            class="method-args">(current_user, create_hash)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_user-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_user</span>(<span class="ruby-identifier">current_user</span>, <span class="ruby-identifier">create_hash</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-string">'/platform/user/'</span>, <span class="ruby-identifier">create_hash</span>, <span class="ruby-value">:post</span>, <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create_user-method -->
+
+    
+      <div id="method-c-delete_rule" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_rule</span><span
+            class="method-args">(user, id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_rule-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_rule</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-node">&quot;/platform/rule/#{id}&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:delete</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_rule-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_rule-method -->
+
+    
+      <div id="method-c-delete_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_user</span><span
+            class="method-args">(current_user, user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_user-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_user</span>(<span class="ruby-identifier">current_user</span>, <span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-node">&quot;/platform/user/#{user_id}&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:delete</span>, <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_user-method -->
+
+    
+      <div id="method-c-get_api_docs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_api_docs</span><span
+            class="method-args">(user, search_string)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_api_docs-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_api_docs</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">search_string</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-string">'/platform/api_docs'</span>, { <span class="ruby-identifier">search_string</span><span class="ruby-operator">:</span> <span class="ruby-identifier">search_string</span> }, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_api_docs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_api_docs-method -->
+
+    
+      <div id="method-c-get_comparison_rule_conditions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_comparison_rule_conditions</span><span
+            class="method-args">(user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_comparison_rule_conditions-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_comparison_rule_conditions</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-string">'/platform/rule/comparison_rule_conditions'</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_comparison_rule_conditions-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_comparison_rule_conditions-method -->
+
+    
+      <div id="method-c-get_customer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_customer</span><span
+            class="method-args">(user, user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_customer-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_customer</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-node">&quot;/platform/customer/#{user_id}&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_customer-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_customer-method -->
+
+    
+      <div id="method-c-get_customers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_customers</span><span
+            class="method-args">(user, query=nil, page=1, per_page=10)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_customers-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_customers</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">per_page</span>=<span class="ruby-value">10</span>)
+  <span class="ruby-identifier">endpoint</span> = <span class="ruby-node">&quot;/platform/customer?per_page=#{per_page}&amp;page=#{page}&quot;</span>
+  <span class="ruby-identifier">endpoint</span> = <span class="ruby-node">&quot;#{endpoint}&amp;query=#{URI.escape(query)}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-identifier">endpoint</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_customers-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_customers-method -->
+
+    
+      <div id="method-c-get_device_instance_last_report" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_device_instance_last_report</span><span
+            class="method-args">(user, device_instance)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_device_instance_last_report-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_device_instance_last_report</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">device_instance</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-string">'/platform/data/monitor?per_page=1&amp;device_instance_id='</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">device_instance</span>.<span class="ruby-identifier">_id</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_device_instance_last_report-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_device_instance_last_report-method -->
+
+    
+      <div id="method-c-get_device_instance_report_count" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_device_instance_report_count</span><span
+            class="method-args">(user, device_instance)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_device_instance_report_count-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_device_instance_report_count</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">device_instance</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-string">'/platform/device_instance/'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">device_instance</span>.<span class="ruby-identifier">_id</span> <span class="ruby-operator">+</span> <span class="ruby-string">'/report_count'</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_device_instance_report_count-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_device_instance_report_count-method -->
+
+    
+      <div id="method-c-get_device_instance_reports" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_device_instance_reports</span><span
+            class="method-args">(user, device_instance)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_device_instance_reports-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_device_instance_reports</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">device_instance</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-string">'/platform/data/monitor?device_instance_id='</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">device_instance</span>.<span class="ruby-identifier">_id</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_device_instance_reports-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_device_instance_reports-method -->
+
+    
+      <div id="method-c-get_device_instances" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_device_instances</span><span
+            class="method-args">(user, page=1, per_page=10)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_device_instances-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_device_instances</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">per_page</span>=<span class="ruby-value">10</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-node">&quot;/platform/device_instance?page=#{page}&amp;per_page=#{per_page}&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_device_instances-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_device_instances-method -->
+
+    
+      <div id="method-c-get_devices" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_devices</span><span
+            class="method-args">(user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_devices-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_devices</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-string">'/platform/device/'</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_devices-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_devices-method -->
+
+    
+      <div id="method-c-get_join_rule_conditions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_join_rule_conditions</span><span
+            class="method-args">(user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_join_rule_conditions-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_join_rule_conditions</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-string">'/platform/rule/join_rule_conditions'</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_join_rule_conditions-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_join_rule_conditions-method -->
+
+    
+      <div id="method-c-get_rule" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_rule</span><span
+            class="method-args">(user, id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_rule-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_rule</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-node">&quot;/platform/rule/#{id}&quot;</span>, <span class="ruby-identifier">id</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_rule-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_rule-method -->
+
+    
+      <div id="method-c-get_rules" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_rules</span><span
+            class="method-args">(user, query=nil, page=1, per_page=10)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_rules-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_rules</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">per_page</span>=<span class="ruby-value">10</span>)
+  <span class="ruby-identifier">endpoint</span> = <span class="ruby-node">&quot;/platform/rule?per_page=#{per_page}&amp;page=#{page}&quot;</span>
+  <span class="ruby-identifier">endpoint</span> = <span class="ruby-node">&quot;#{endpoint}&amp;query=#{URI.escape(query)}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-identifier">endpoint</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_rules-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_rules-method -->
+
+    
+      <div id="method-c-get_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_user</span><span
+            class="method-args">(user, user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_user-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_user</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-node">&quot;/platform/user/#{user_id}&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_user-method -->
+
+    
+      <div id="method-c-get_users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_users</span><span
+            class="method-args">(user, query=nil, page=1, per_page=10)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_users-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_users</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">page</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">per_page</span>=<span class="ruby-value">10</span>)
+  <span class="ruby-identifier">endpoint</span> = <span class="ruby-node">&quot;/platform/user?per_page=#{per_page}&amp;page=#{page}&quot;</span>
+  <span class="ruby-identifier">endpoint</span> = <span class="ruby-node">&quot;#{endpoint}&amp;query=#{URI.escape(query)}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-identifier">endpoint</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_users-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_users-method -->
+
+    
+      <div id="method-c-update_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_user</span><span
+            class="method-args">(current_user, update_hash, user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update_user-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_user</span>(<span class="ruby-identifier">current_user</span>, <span class="ruby-identifier">update_hash</span>, <span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">platform_request</span>(<span class="ruby-node">&quot;/platform/user/#{user_id}&quot;</span>, <span class="ruby-identifier">update_hash</span>, <span class="ruby-value">:put</span>, <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">authentication_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_user-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="private-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Private Class Methods</h3>
+
+    
+      <div id="method-c-headers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">headers</span><span
+            class="method-args">(authentication_token)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="headers-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">headers</span>(<span class="ruby-identifier">authentication_token</span>)
+  <span class="ruby-identifier">heads</span> = { <span class="ruby-identifier">content_type</span><span class="ruby-operator">:</span> <span class="ruby-value">:json</span>, <span class="ruby-identifier">accept</span><span class="ruby-operator">:</span> <span class="ruby-value">:json</span> }
+  <span class="ruby-identifier">heads</span>.<span class="ruby-identifier">merge!</span>({ <span class="ruby-identifier">authorization</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Basic &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Base64</span>.<span class="ruby-identifier">encode64</span>(<span class="ruby-identifier">authentication_token</span> <span class="ruby-operator">+</span> <span class="ruby-string">':X'</span>) }) <span class="ruby-keyword">if</span> <span class="ruby-identifier">authentication_token</span>
+  <span class="ruby-identifier">heads</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- headers-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- headers-method -->
+
+    
+      <div id="method-c-platform_request" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">platform_request</span><span
+            class="method-args">(endpoint, body_hash, http_verb, authentication_token)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="platform_request-source">
+            <pre><span class="ruby-comment"># File app/models/machine_shop_api.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">platform_request</span>(<span class="ruby-identifier">endpoint</span>, <span class="ruby-identifier">body_hash</span>, <span class="ruby-identifier">http_verb</span>, <span class="ruby-identifier">authentication_token</span>)
+  <span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;#{API_URL}#{endpoint}&quot;</span>
+  <span class="ruby-identifier">body</span> = (<span class="ruby-identifier">http_verb</span> <span class="ruby-operator">==</span> <span class="ruby-value">:get</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">body_hash</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">body_hash</span>.<span class="ruby-identifier">to_json</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">http_verb</span> <span class="ruby-operator">==</span> <span class="ruby-value">:get</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">http_verb</span> <span class="ruby-operator">==</span> <span class="ruby-value">:delete</span>
+      <span class="ruby-identifier">json_response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">public_send</span>(<span class="ruby-identifier">http_verb</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">headers</span>(<span class="ruby-identifier">authentication_token</span>).<span class="ruby-identifier">merge</span>({ <span class="ruby-identifier">params</span><span class="ruby-operator">:</span> <span class="ruby-identifier">body</span> }))
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">json_response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">public_send</span>(<span class="ruby-identifier">http_verb</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">body</span>, <span class="ruby-identifier">headers</span>(<span class="ruby-identifier">authentication_token</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">json_response</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">http_body</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">json_response</span>, <span class="ruby-value">:symbolize_names</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- platform_request-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- platform_request-method -->
+
+    
+    </section><!-- private-class-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

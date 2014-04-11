@@ -1,0 +1,34 @@
+= javascript_include_tag "//www.google.com/jsapi", "chartkick"
+
+.span10#reports-wrap.no-margin-left
+  %h3 Reports &amp; Analytics
+  %p In order to help with performance tuning and to better understand services usage, we have created several reports based on your account.
+
+  .row-fluid.no-margin-left
+    .span12#multi-line-chart
+      = line_chart @massaged_di_reports, :library => {title: 'Device Instance Reports: Last 30 Days', titleTextStyle: {color: '#4d4d4d', fontSize: 15}, legend: {position: 'bottom', textStyle: {fontSize: 12}}, series: [{color: '#C6D5E5', lineWidth: '1'}, {color: '#7CB3D8', lineWidth: '1'}, {color: '#47A5B7', lineWidth: '1'}, {color: '#B3B3B3', lineWidth: '1'}, {color: '#7B8796', lineWidth: '1'}], chartArea: {width:"85%", height:"75%"}}
+
+  .row-fluid.no-margin-left
+    .span12
+      .span7.no-margin-left#bar-chart
+        = column_chart @massaged_reports, :library => {title: "Total Reports", titleTextStyle: {color: '#4d4d4d', fontSize: 15}, colors: ['#C6D5E5', '#7CB3D8', '#47A5B7']}
+
+      - if @rule_summary == {pass: 0, fail: 0} or @rule_summary.keys[0] == :error
+        .span5#pie-chart{style: "height: 100%; text-align:center; position:relative;"}
+          %div#no-report-msg
+            %h5{style: "font-size:16px; margin-top:6%;"} Last Run Status for Rules
+          %div#css-circle{style: "height:200px; width:200px; border:1px solid #47A5B7; margin:0 auto; margin:10% auto 7.6%; vertical-align:middle; line-height:200px; border-radius:100px;"}
+            - if @rule_summary.keys[0] == :error
+              %span{style: "color:#b82e2e"}
+                There was an error retrieving
+
+            - elsif @rule_summary == {pass: 0, fail: 0}
+              %p{style: "color:#b82e2e"} No rules to report on
+
+      - else
+        .span5#pie-chart
+          = pie_chart @rule_summary, :library => {title: "Last Run Status for Rules", titleTextStyle: {color: '#4d4d4d', fontSize: 15}, chartArea: {top: "50%"}, colors: ['#C6D5E5', '#7CB3D8', '#47A5B7'], legend: {position: 'bottom', textStyle: {fontSize: 12}}}
+
+  .row-fluid.no-margin-left
+    .span12#api-request-chart
+      = line_chart @massaged_api_requests, :library => {title: "API Requests per Day", titleTextStyle: {color: '#4d4d4d', fontSize: 15}, series: [{color: '#47A5B7', lineWidth: '1'}]}

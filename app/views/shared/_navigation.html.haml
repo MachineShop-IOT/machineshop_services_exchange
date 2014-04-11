@@ -1,0 +1,44 @@
+- if controller?(['user_sessions'])
+  .row-fluid#login-nav
+    .span6
+      = image_tag 'logo-dark.png'
+
+- else
+  .row-fluid.logo-row
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner#top-nav
+        .container-fluid
+          %a.btn.btn-navbar(data-target="#top-nav-collapse" data-toggle="collapse")
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %ul#logo-greet
+            %li#logo
+              - if current_user.logo_url.blank?
+                = link_to image_tag('logo.png'), welcomes_index_path
+              - else
+                = link_to image_tag("#{current_user.logo_url}", id: 'customer-logo'), welcomes_index_path
+            %li#greeting
+              - if current_user.present?
+                = "Welcome #{current_user.full_name}"
+              - else
+                = "Welcome"
+          .nav-collapse.clearfix#top-nav-collapse
+            %ul#top-nav-list
+              %li#help
+                = link_to "Help", resources_path
+              - if current_user.present?
+                %li
+                  = link_to 'My Settings', edit_user_path(current_user)
+              - if current_user.present?
+                %li#login-out
+                  = link_to "Logout", user_session_path, method: :delete
+              - else !current_user.present? and controller?(['user_sessions'])
+                %li#login-out
+                  = link_to "Login", new_user_session_path
+              %li
+                = form_tag(documents_index_path, :method => :get) do
+                  = text_field_tag 'search_string', nil, :placeholder => "Search", id: 'nav-search-box'
+                  = submit_tag "Search", :class => "btn btn-mini"
+
+

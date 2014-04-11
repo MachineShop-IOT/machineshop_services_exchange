@@ -1,0 +1,16 @@
+/* ---------- See welcomes.css.scss for additional styling declarations ---------- */
+#support-wrap, #ideas-wrap {
+}
+
+#support-wrap .backboards-wrap ul li:first-of-type,
+#ideas-wrap .backboards-wrap ul li:first-of-type {
+  line-height:130px;
+}
+
+.span4.backboard-grey.tall-backboard {
+  height:300px;
+}
+
+#support-contact {
+  margin-top:6%;
+}

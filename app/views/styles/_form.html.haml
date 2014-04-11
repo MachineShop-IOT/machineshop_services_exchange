@@ -1,0 +1,81 @@
+= form_for @style do |f|
+  - if current_user.publisher?
+    = f.hidden_field :user_id, :value => current_user._id
+  - if @style.errors.any?
+    #error_explanation
+      %h2.ms-red-text= "#{pluralize(@style.errors.count, "error")} prohibited this style from being saved:"
+      %ul
+        - @style.errors.full_messages.each do |msg|
+          %li.ms-red-text= msg
+
+  .row-fluid.span12
+    .span3
+      .form_label
+        = f.label :name
+    .span9
+      .form_field
+        = f.text_field :name, class: 'input-block-level'
+
+  .row-fluid.span12
+    .span3
+      .form_label
+        = f.label :font_type
+    .span9
+      .form_field
+        = f.select :font_type, options_for_select([['Times New Roman', "Times New Roman, Times, serif"], ['Arial', "Arial, Helvetica, sans-serif"], ['Courier New', "Courier New, Courier, monospace"]], @style.font_type), {}, {class: "input-block-level custom-select"}
+
+  .row-fluid.span12
+    .span3
+      .form_label
+        = f.label :background_color
+    .span9
+      .form_field
+        = f.text_field :background_color, class: 'input-block-level color'
+
+  .row-fluid.span12
+    .span3
+      .form_label
+        = f.label :font_color
+    .span9
+      .form_field
+        = f.text_field :font_color, class: 'input-block-level color'
+
+  .row-fluid.span12
+    .span3
+      .form_label
+        = f.label :link_color
+    .span9
+      .form_field
+        = f.text_field :link_color, class: 'input-block-level color'
+
+  .row-fluid.span12
+    .span3
+      .form_label
+        = f.label :link_hover_color
+    .span9
+      .form_field
+        = f.text_field :link_hover_color, class: 'input-block-level color', placeholder: "005580"
+  .row-fluid.span12
+    .span3
+      .form_label
+        = f.label "Active nav icon color"
+    .span9
+      .form_field
+        = f.text_field :active_icon_color, class: 'input-block-level color'
+
+  .row-fluid.span12
+    .span3
+      .form_label
+        = f.label "Backboards hover color"
+    .span9
+      .form_field
+        = f.text_field :backboards_color, class: 'input-block-level color'
+
+  .row-fluid.span12
+    .span3
+    #restore-defaults
+      %a Use Defaults
+    #save-cancel
+      - if current_user.admin?
+        = link_to("Cancel", styles_url)
+      = f.submit "Save", class: 'btn-large btn-custom-large'

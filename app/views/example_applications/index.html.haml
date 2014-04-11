@@ -1,0 +1,28 @@
+.span10#example-applications-wrapper
+  .span11.row-fluid
+    %h3.span5 Example Applications
+    %p.span11.no-margin-left Sample applications including source code
+
+  .span11.no-margin-left.dashed-border
+    %h4 Sample Location Device Tracking Application
+    %p Our internal API Guy has written a ruby-on-rails application that demonstrates how to retrieve information from the system that has been reported by a location reporting device. He also shows how to plot this on a map and a variety of other tracking application related tasks
+
+    %h5 See the Code
+    %p
+      The project is available on
+      %a(href='https://github.com/apiguy-machineshop/SampleApp-GL100' target='_blank') github
+
+    %h5 Click the image below to see it in action.
+    = link_to image_tag("sample_app.png", :class => 'sample-app-image'), "http://dcn-apiclient.herokuapp.com/" , :target => '_blank'
+
+  .span11
+  /.span11.no-margin-left.dashed-border
+  /%h4 Sample Rule-Creation Application
+  /%p This ruby-on-rails application allows you to step through creating a rule and see the JSON that's created through this process.
+
+  /%h5 See the Code
+  /%p
+  /The project is available on
+  /%a(href='https://github.com/apiguy-machineshop/rules-machine' target="_blank") github
+  /%h5 Click the image below to see it in action.
+  /= link_to image_tag("rule_sample_app.png", :class => 'sample-app-image'), " http://rules-machine.herokuapp.com/" , :target => '_blank'

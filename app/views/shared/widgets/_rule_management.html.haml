@@ -1,0 +1,26 @@
+%ul.machineshop-header
+  %li= image_tag 'rulers2.png', { style: "height:32px; width:32px" }
+  %li RULE MANAGEMENT
+  = render partial: 'shared/header_buttons', locals: {collapsed: collapsed}
+.machineshop-inner-container.rule_management{ :style => collapsed ? 'display: none;' : '' }
+  .table_container
+    /%ul#new-rule.add-record
+    /%li
+    /= link_to image_tag('add-btn.png'), new_rules_path
+    /%li
+    /= link_to "Add", new_rules_path
+    .row-fluid
+      %table.table.table-striped#rule-management-data
+        %thead
+          %tr
+            %th Description
+            %th Date Created
+            %th Delete
+        %tbody.paged_data
+          %tr
+            %td.loading
+            %td
+              Loading...
+            %td
+
+  = render 'shared/pager'

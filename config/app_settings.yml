@@ -1,0 +1,29 @@
+development:
+  platform_domain: https://services.machineshop.io
+  platform_root: /api/v0
+  monitor_domain: https://services.machineshop.io
+  meter_domain: https://services.machineshop.io
+  zen_user: #YOUR_USER@company.com/token
+  zen_token: #YOUR_ZEN_TOKEN
+  zen_submitter: #YOUR_ZEN_SUBMITTER ex: 123456789
+  zen_url: #https://YOUR_COMPANY.zendesk.com/api/v2
+
+test:
+  platform_domain: http://machineshop.dev:3000
+  platform_root: /api/v0
+  monitor_domain: http://machineshop.dev:3000
+  meter_domain: http://machineshop.dev:3000
+  zen_user: #YOUR_USER@company.com/token
+  zen_token: #YOUR_ZEN_TOKEN
+  zen_submitter: #YOUR_ZEN_SUBMITTER ex: 123456789
+  zen_url: #https://YOUR_COMPANY.zendesk.com/api/v2
+
+production:
+  platform_domain: https://services.machineshop.io
+  platform_root: /api/v0
+  monitor_domain: https://services.machineshop.io
+  meter_domain: https://services.machineshop.io
+  zen_user: #YOUR_USER@company.com/token
+  zen_token: #YOUR_ZEN_TOKEN
+  zen_submitter: #YOUR_ZEN_SUBMITTER ex: 123456789
+  zen_url: #https://YOUR_COMPANY.zendesk.com/api/v2

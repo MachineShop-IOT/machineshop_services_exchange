@@ -1,0 +1,17 @@
+- last_reports.each do |id, report|
+  - di = find_device_instance(id, page)
+  %td.local-time
+    = format_time(report.created_at)
+  %td
+    = di.name
+  %td
+    = di.device[:model]
+  %td
+    - if report
+      .btn.btn-mini.btn-custom-msg
+        %a{:href => "#report_detail", 'data-reportid' => report._id, 'data-toggle' => 'modal', :onclick => "javascript:$('.modal_report_details').text('#{report.payload.to_json}')"
+          Message Detail
+    - else
+      (no details)
+
+  

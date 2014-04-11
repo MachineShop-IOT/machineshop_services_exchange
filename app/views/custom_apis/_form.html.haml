@@ -1,0 +1,51 @@
+= form_for @custom_api do |f|
+  = hidden_field_tag :old_name, @name
+
+  .span12
+    .error
+      = f.object.error
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :name
+    .span10
+      .form_field
+        - if @name
+          = f.text_field :name, {value: "#{@name.gsub('_', ' ')}", class: 'input-block-level'}
+        - else
+          = f.text_field :name, class: 'input-block-level'
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :method
+    .span10
+      .form_field
+        = f.text_field :method, class: 'input-block-level'
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :endpoint
+    .span10
+      .form_field
+        = f.text_field :endpoint, class: 'input-block-level'
+
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :base_domain
+    .span10
+      .form_field
+        = f.text_field :base_domain, class: 'input-block-level'
+
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :protocol
+    .span10
+      .form_field
+        = f.text_field :protocol, class: 'input-block-level'
+
+  .row-fluid.span12
+    #save-cancel
+      = link_to("Cancel", custom_apis_url)
+      = f.submit "Save", class: 'btn-large btn-custom-large'

@@ -1,0 +1,27 @@
+.cke_toolbox > span:not(:first-of-type) {
+  display:none;
+}
+
+.cke_inner > span:first-of-type {
+  background-image:none;
+  background-color:#e6e6e6;
+  border:none;
+  box-shadow:none;
+  border-radius:0;
+}
+
+.cke_inner > span[id*='_bottom'] {
+  background-image:none;
+  background-color:#e6e6e6;
+  border:none;
+  box-shadow:none;
+  border-radius:0;
+}
+
+.ckeditor {
+  display:block;
+}
+
+textarea[class='ckeditor'] ~ div:first-of-type {
+  border:1px solid #e6e6e6;
+}

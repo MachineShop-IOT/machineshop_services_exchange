@@ -1,0 +1,249 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+html, body {
+  height:100%;
+  color:#4d4d4d;
+}
+
+body {
+  padding:0;
+}
+
+a {
+  color:#ea4848;
+  text-decoration:none;
+}
+
+h3 {
+  color:#4d4d4d;
+  font-weight:normal;
+}
+
+h4 {
+  font-size:20px;
+  font-weight:normal;
+}
+
+[class*="span"]:after {
+  clear:both;
+  content:"";
+  display:block;
+  height:0;
+}
+
+.pager {
+  margin:0;
+}
+
+.navbar-fixed-top {
+  box-shadow:0px 1px 10px rgba(50, 50, 50, 0.78);
+  -moz-box-shadow:0px 1px 10px rgba(50, 50, 50, 0.78);
+  -webkit-box-shadow:0px 1px 10px rgba(50, 50, 50, 0.78);
+  margin-bottom:0;
+  position:fixed;
+}
+
+.nav-list li a:hover {
+  background-color:#FFFFFF;
+  color:#D32027;
+}
+
+table.table.table-bordered {
+  border-radius:0;
+  border:1px solid #E6E6E6;
+}
+
+table.table.table-bordered th {
+  border-radius:0;
+  border:0;
+}
+
+table.table.table-striped thead:first-child tr:first-child > th:first-child,
+table.table.table-striped thead:first-child tr:first-child > th:last-child {
+  border-radius:0;
+  margin-bottom:0;
+}
+
+.table-striped thead > tr:nth-child(odd) > th {
+  background-color:#E6E6E6;
+  font-size:13px;
+  font-weight:normal;
+}
+
+.table-striped tbody > tr {
+  font-size:13px;
+  height:25px;
+}
+
+.table-striped tbody > tr > td {
+  padding:5px 5px 5px 8px;
+  border:0;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td {
+  background-color:#FFFFFF;
+}
+
+.table-striped tbody > tr:nth-child(even) > td {
+  background-color:#F7F7F7;
+}
+
+.btn-custom-large {
+  border:none;
+  color:#ffffff;
+  background-color:#7cb3d8;
+  background-image:none;
+  font-size:12px;
+  height:32px;
+  line-height:12px;
+  padding:11px 48px;
+  text-shadow:none;
+  border-radius:10px;
+}
+
+.btn-custom {
+  border:none;
+  color:#ffffff;
+  background-color:#7cb3d8;
+  background-image:none;
+  font-size:12px;
+  height:32px;
+  line-height:12px;
+  text-shadow:none;
+}
+
+.btn-custom:hover,
+.btn-custom-large:hover,
+.btn-custom:focus,
+.btn-custom-large:focus,
+.btn-custom:active,
+.btn-custom-arge:active,
+.btn-custom.active,
+.btn-custom-large.active,
+.btn-custom.disabled,
+.btn-custom-large.disabled,
+.btn-custom[disabled],
+.btn-custom-large[disabled] {
+  color:#fff;
+  background-color:#28658c;
+  *background-color:#7cb3d8;
+}
+
+.btn-custom:active,
+.btn-custom-large:active,
+.btn-custom.active,
+.btn-custom-large.active{
+  background-color: #28658c \9;
+}
+
+.btn-custom-msg {
+  color:#fff;
+  background-color:#7cb3d8;
+  *background-color:#7cb3d8;
+  background-image:none;
+  border:0;
+  height:18px;
+  line-height:18px;
+  text-decoration:none;
+  text-shadow:none;
+  border-radius:18px;
+}
+
+.btn-custom-msg:hover,
+.btn-custom-msg:active,
+.btn-custom-msg.active,
+.btn-custom-msg.disabled,
+.btn-custom-msg[disabled] {
+  color:#fff;
+  background-color:#28658c;
+  *background-color:#a9302a;
+  text-decoration:none;
+}
+
+.btn-custom-msg:active,
+.btn-custom-msg.active {
+  background-color:#28658c \9;
+}
+
+.btn-login {
+  border:none;
+  color:#ffffff;
+  background-color:#2f3a3f;
+  background-image:none;
+  font-size:18px;
+  height:42px;
+  line-height:18px;
+  text-shadow:none;
+  border-radius:4px;
+}
+
+.btn-login:hover,
+.btn-login-large:hover,
+.btn-login:focus,
+.btn-login-large:focus,
+.btn-login:active,
+.btn-login-arge:active,
+.btn-login.active,
+.btn-login-large.active,
+.btn-login.disabled,
+.btn-login-large.disabled,
+.btn-login[disabled],
+.btn-login-large[disabled] {
+  color:#fff;
+  background-color:#9e9e9e;
+  *background-color:#7cb3d8;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow:0 0 0px 1000px #fff inset;
+}
+
+input[id='user_session_email']:-webkit-autofill,
+input[id='user_session_password']:-webkit-autofill,
+input[id='user_session_email'] {
+  color:white;
+  box-shadow:0 0 0px 1000px #b3b3b3 inset;
+  -moz-shadow:0 0 0px 1000px #b3b3b3 inset;
+  -o-box-shadow:0 0 0px 1000px #b3b3b3 inset;
+  -webkit-box-shadow:0 0 0px 1000px #b3b3b3 inset;
+}
+
+input[type="password"],
+input[id='user_session_email'] {
+  background-color:#b3b3b3;
+}
+
+input[type="text"] {
+  /* color:#ccc; */
+  color:#6f6b6b;
+}
+
+/* --------- Styles Placeholder --------- */
+
+#user_session_email::-webkit-input-placeholder,
+#user_session_password::-webkit-input-placeholder {
+   color:#fff;
+}
+
+#user_session_email:-moz-placeholder,
+#user_session_password:-moz-placeholder { /* Firefox 18- */
+   color:fff;
+}
+
+#user_session_email::-moz-placeholder,
+#user_session_password::-moz-placeholder {  /* Firefox 19+ */
+   color:#fff;
+}
+
+#user_session_email:-ms-input-placeholder,
+#user_session_password:-ms-input-placeholder {
+   color:#fff;
+}
+
+/* --------- END Styles Placeholder --------- */

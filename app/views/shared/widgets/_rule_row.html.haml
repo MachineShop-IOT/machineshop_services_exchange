@@ -1,0 +1,19 @@
+%td.rules-list
+  = rule_instance.description
+  %p.notice
+    = rule_instance.plain_english
+%td
+  = rule_instance.created_at.to_time.strftime("%m/%d/%Y")
+%td
+  = link_to "Delete", rules_path(:id => rule_instance._id),
+  class: "delete",
+  confirm: "Delete rule '#{rule_instance.description}'",
+  method: :delete,
+  remote: true
+  :javascript
+    $("a.delete").bind("ajax:success", function(evt, data, status, xhr) {
+    $(this).closest("tr").fadeOut(500);
+    });
+    $("a.delete").bind("ajax:error", function(evt, xhr, status, error) {
+    alert("We're sorry but something went wrong. The rule was not deleted.")
+    });

@@ -1,0 +1,18 @@
+a {color:#<%= @style.link_color %> !important;}
+
+a:hover {color:#<%= @style.link_hover_color %> !important;}
+
+#icon-links img.active-img,
+#icon-links img:hover {
+  background-color:#<%= @style.active_icon_color %> !important;
+}
+
+.row1-backboards .backboard-grey:hover, .row2-backboards .backboard-grey:hover {
+  background-color:#<%= @style.backboards_color %> !important;
+}
+
+html, body {
+  background-color:#<%= @style.background_color %> !important;
+  font-family:<%= @style.font_type %> !important;
+  color:#<%= @style.font_color %> !important;
+}

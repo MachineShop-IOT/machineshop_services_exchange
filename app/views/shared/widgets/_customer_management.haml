@@ -1,0 +1,56 @@
+- if controller?(['dashboards'])
+  %ul.machineshop-header
+    %li= image_tag'users_small.png'
+    %li CUSTOMER MANAGEMENT
+    = render partial: 'shared/header_buttons', locals: {collapsed: collapsed}
+  .machineshop-inner-container.customer_management{ :style => collapsed ? 'display: none;' : '' }
+    = form_tag('/widgets/retrieve_users', :method => :get, :id => 'user_search') do
+      = text_field_tag :query, nil, :placeholder => "Search Customers", :id => 'customer-search-box'
+      = submit_tag "Search", :class => "btn btn-mini"
+    %ul.add-record#add-customer
+      %li= link_to image_tag('add-btn.png'), new_user_path
+      %li= link_to "Add", new_user_path
+
+    .table_container
+      %table.table.table-striped#customer-management-data
+        %thead
+          %tr
+            %th Name
+            %th Email
+            %th Role
+            %th Company
+            %th Actions
+        %tbody.paged_data
+          %tr
+            %td.loading
+            %td
+              Loading...
+            %td
+            %td
+            %td
+
+  .row-fluid.no-margin-left
+    = render 'shared/pager'
+
+- else
+  .row-fluid
+    %table.table.table-bordered.table-striped#customer-management-data
+      %thead
+        %tr
+          %th NAME
+          %th EMAIL
+          %th ROLE
+          %th COMPANY
+          %th ACTIONS
+      %tbody.paged_data
+        %tr
+          %td.loading
+          %td
+            Loading...
+          %td
+          %td
+          %td
+
+  .row-fluid.no-margin-left
+    = render 'shared/pager'
+

@@ -1,0 +1,12 @@
+.span10#custom-api-index-wrap
+  .row-fluid.span12
+    %h3.span5 Custom APIs
+  .row-fluid.no-margin-left
+    %p.span6.no-margin-left Manage custom APIs
+    .span2.pull-right
+      %ul.add-record#add-custom-api
+        %li= link_to image_tag('add-btn.png'), new_custom_api_path
+        %li= link_to "Add", new_custom_api_path
+
+  .custom_api_management
+    = render partial: "shared/widgets/custom_api_management", locals: { collapsed: false }

@@ -1,0 +1,18 @@
+%ul.machineshop-header
+  %li= image_tag 'user_small.png'
+  %li USER PROFILE
+  = render partial: 'shared/header_buttons', locals: {collapsed: collapsed}
+.machineshop-inner-container#user-profile-data{ :style => collapsed ? 'display: none;' : '' }
+  %h4= current_user.company_name
+  %ul
+    %li#admin-name= current_user.full_name
+    %li.ms-red-text= link_to current_user.email, "mailto:#{current_user.email}"
+    %li= "Sign-In Count: #{current_user.sign_in_count}"
+    %li
+      %span Last Sign-in:
+      %span.local-time= current_user.last_sign_in_at ? format_time(current_user.last_sign_in_at) : "(none)"
+    %li= "Sign-In IP: #{current_user.current_sign_in_ip}"
+    %li= "Phone Number: #{current_user.phone_number}"
+    %li= "Notification Method: #{current_user.notification_method.upcase}"
+    %li#admin-token= "Access Token:"
+    %p= current_user.authentication_token

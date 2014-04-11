@@ -1,0 +1,72 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title= content_for?(:title) ? yield(:title) : "MachineshopPortal"
+    = csrf_meta_tags
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
+    = stylesheet_link_tag "application", :media => "all"
+
+    - if current_user.present? 
+      - if current_user.consumer? && !current_user.publisher_id.blank?
+        - if Style.find_by_user_id(current_user.publisher_id) 
+          %link(href="/styles/#{Style.find_by_user_id(current_user.publisher_id).id}.css"  type="text/css" rel="stylesheet")
+      - elsif current_user.publisher? && Style.find_by_user_id(current_user._id)
+        %link(href="/styles/#{Style.find_by_user_id(current_user._id).id}.css"  type="text/css" rel="stylesheet")
+
+    /= favicon_link_tag 'favicon.ico'
+    %link(rel="shortcut icon" type="image/vnd.microsoft.icon" href="/public/favicon.ico")
+    %link(href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144")
+    %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
+    %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
+    %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
+    %link(href="images/favicon.ico" rel="shortcut icon")
+
+
+  %body
+    - if controller?(['user_sessions'])
+      = render 'shared/navigation'
+      .container-fluid#content-login
+        .row-fluid
+          .span12
+            = yield
+    - else
+      = render 'shared/navigation'
+
+      - if !controller?(['user_sessions'])
+        = render 'shared/global_sidebar_nav'
+
+      - if !controller?(%w(welcomes, user_sessions))
+        = render 'shared/sidebar_nav'
+
+      .container-fluid#content
+        .row-fluid
+          .span12
+            = yield
+          .span10.no-margin-left#bottom-nav-contain
+            - if controller?(['welcomes'])
+              %style
+                img[id='bottom-logo'], div[id='bottom-links'] {margin-left: 2.6%;}
+            .span12.no-margin-left
+              = link_to image_tag('logo.png', id: 'bottom-logo'), welcomes_index_path
+            .span12#terms-privacy
+              #bottom-links
+                = link_to '#' do
+                  %p &copy; 2013 Machineshop
+                = link_to '#' do
+                  %p#margin-it Terms
+                = link_to '#' do
+                  %p Privacy
+
+  /#footer-contain.container-fluid
+  /= render 'shared/footer'
+  /
+    Javascripts
+    \==================================================
+  / Placed at the end of the document so the pages load faster
+  = javascript_include_tag "application"
+

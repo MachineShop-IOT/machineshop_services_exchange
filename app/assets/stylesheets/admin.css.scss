@@ -1,0 +1,93 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ---------- Admin Sidebar Nav ---------- */
+
+#variable-sidebar {
+  background-color:#f0f0f0;
+  border-right:1px solid #e6e6e6;
+  color:#4d4d4d;
+  display:inline-block;
+  float:left;
+  height:100%;
+  margin-left:0;
+  position:fixed;
+  min-width:150px;
+  max-width:15.7%;
+  z-index:1;
+}
+
+#services-sidebar {
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+#variable-sidebar h4 {
+  font-size:20px;
+  font-weight:normal;
+  padding:12% 15px 0;
+}
+
+#variable-sidebar p {
+  padding:0 15px;
+}
+
+#variable-sidebar ul {
+  color:#b3b3b3;
+  font-size:18px;
+  margin-top:12%;
+  /* margin-top:28%; */
+}
+
+#variable-sidebar ul li {
+  cursor:pointer;
+  font-size:14px;
+  font-weight:normal;
+}
+
+#variable-sidebar ul li a {
+  color:#b3b3b3;
+  padding:3px 0 3px 15px;
+}
+
+#variable-sidebar ul.nav.nav-list.sub-nav li a {
+  color:#4d4d4d;
+  padding:3px 0 3px 30px;
+}
+
+#variable-sidebar ul li a:hover {
+  background-color:transparent;
+  background-size:contain;
+  color:#d3a44a;
+  cursor:pointer;
+}
+
+#variable-sidebar ul.nav.nav-list li.active-side-nav a {
+  background:url('sidebar-arrow.png') no-repeat 100% center;
+  background-size:contain;
+  background-color:#f9f9f9;
+  margin-right:-16px;
+  color:#4d4d4d;
+  z-index:2;
+}
+
+#variable-sidebar ul.sub-nav {
+  margin-top:0;
+  padding:0;
+  width:100%;
+}
+
+#variable-sidebar ul.nav.nav-list.sub-nav li a {
+  background-image:none;
+  list-style-type:none;
+  margin-right:-15px;
+  margin-top:0;
+  width:inherit;
+}
+
+#variable-sidebar ul.nav.nav-list.sub-nav li a:hover,
+#variable-sidebar ul.nav.nav-list li.active-sub-nav a {
+  background-color:transparent;
+  color:#d3a44a;
+}

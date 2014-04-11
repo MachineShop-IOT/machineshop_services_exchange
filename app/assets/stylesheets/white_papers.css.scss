@@ -1,0 +1,22 @@
+#white-papers-wrapper > .span12.dashed-border,
+#white-papers-wrapper > .span12.table-it,
+#white-papers-wrapper > .span12.edit-delete {
+  display:table;
+}
+
+#white-papers-wrapper > .span12.no-margin-left.dashed-border > [class*='span'],
+#white-papers-wrapper > .span12.table-it > [class*='span'],
+#white-papers-wrapper > .span12.edit-delete > [class*='span'] {
+  display:table-cell;
+  float:none;
+  vertical-align:middle;
+}
+
+#white-papers-wrapper .span2 {
+  text-align:center;
+}
+
+#add-white-paper {
+  float:none;
+}
+

@@ -1,0 +1,18 @@
+.span9#show-custom-api-wrap
+  .row-fluid
+    %h3.span6 Custom Style Profile
+
+  .row-fluid.no-margin-left.dashed-border
+    .span6.right-widget.profile
+      %ul.machineshop-header
+        %li Custom Style Profile
+      .machineshop-inner-container
+        %h4= @style.name.gsub('_', ' ').capitalize
+        %ul
+          %li= "Link color: #{@style.link_color}"
+          %li= "Link hover color: #{@style.link_hover_color}"
+          %li= "Font type: #{@style.font_type}"
+          %li= "Background color: #{@style.background_color}"
+          %li= "Font color: #{@style.font_color}"
+          %li= "Active nav icon color: #{@style.active_icon_color}"
+          %li= "Backboards hover color: #{@style.backboards_color}"

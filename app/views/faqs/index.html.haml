@@ -1,0 +1,24 @@
+.span10#faq-index-wrapper
+  .span12.row-fluid
+    %h3.span5 FAQ
+
+  .span12.table-it.no-margin-left
+    %p.span10.no-margin-left View frequently asked questions.
+    - if current_user.admin?
+      .span2
+        %ul.add-record#add-faq
+          %li= link_to image_tag('add-btn.png'), new_faq_path
+          %li= link_to "Add", new_faq_path
+
+  - @faqs.each do |faq|
+    .span12.no-margin-left.faq-listing
+      .span12.no-margin-left.dashed-border
+        .span10
+          %h5.faq-question= faq.question
+          .reveal-btn{data: {id: faq.id}}
+        - if current_user.admin?
+          .span2#edit-delete-faq
+            = link_to("Edit", edit_faq_path(faq.id))
+            = link_to("/ Delete", faq_path(faq.id), class: "delete-faq", confirm: "Delete question and answer for: '#{faq.question}'?", method: :delete, remote: true)
+      .span12.no-margin-left.faq-answer{ id: "faq-answer-#{faq.id}"}
+        %p= faq.answer

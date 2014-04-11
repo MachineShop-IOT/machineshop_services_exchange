@@ -1,0 +1,476 @@
+/* ---------- Login Page ----------*/
+
+#content-login {
+  background:url('login-bg.jpg') no-repeat #f2f2f2;
+  background-size:50%;
+}
+
+#login-nav {
+  background-color:#2f3a3f;
+}
+
+#login-nav > .span6 {
+  text-align:center;
+}
+
+#login {
+  float:none;
+  margin:13% auto 0;
+  text-align:center;
+}
+
+#login-nofloat {
+  float:none;
+  margin:0 auto;
+  min-width:316px;
+  max-width:340px;
+}
+
+#user_session_email,
+#user_session_password {
+  border:1px solid #9e9e9e;
+  color:#fff;
+  height:48px;
+  -webkit-appearance:none;
+}
+
+#user_session_email:focus,
+#user_session_password:focus {
+  background-color:#b3b3b3;
+}
+
+.login:after {
+  clear:both;
+  content:"";
+  display:block;
+  height:0;
+}
+
+.login .machineshop-container {
+  width:100%;
+}
+
+#new_user_session {
+  padding:4% 8% 4% 8%;
+}
+
+#login-btn-container {
+  margin:3% 0;
+  text-align:center;
+}
+
+#login-btn-container ~ div {
+  float:none;
+  font-size:12px;
+  margin:0px auto;
+  width:140px;
+  text-align:left;
+}
+
+#login-btn-container ~ div > label {
+  font-size:12px;
+}
+
+#login-btn-container ~ div > * {
+  display:inline-block;
+  margin:0;
+}
+
+/* ---------- Header Nav ---------- */
+
+.logo-row:after {
+  clear:both;
+  content:"";
+  display:block;
+  height:0;
+}
+
+.navbar.navbar-inverse.navbar-fixed {
+  margin-bottom:0;
+}
+
+#top-nav {
+  background-image:none;
+  background-color:#f7f7f7;
+  border:none;
+  box-shadow:none;
+  padding:0;
+  border-radius:0;
+}
+
+#top-nav .container-fluid {
+  padding:0 4.2%;
+}
+
+a.btn.btn-navbar {
+  margin-top:21px;
+}
+
+#logo-greet {
+  float:left;
+  line-height:70px;
+  margin:0;
+}
+
+#logo, #greeting {
+  text-align:left;
+}
+
+#logo img {
+  padding-left:5px;
+}
+
+#top-nav-list {
+  display:inline;
+  float:right;
+  margin:0;
+  min-width:50%;
+}
+
+.guest-nav-list {
+  display:inline-block !important;
+  margin:0;
+  width:41%;
+}
+
+#top-nav-list li {
+  display:inline-block;
+  margin:0 1.1%;
+}
+
+#top-nav-list li a {
+  color:#2f3a3f;
+}
+
+#top-nav-list li:last-of-type {
+  margin-right:0px;
+}
+
+#top-nav-list:after {
+  clear:both;
+  content:"";
+  display:block;
+  height:0;
+}
+
+#gear-nav {
+  display:inline-block;
+  text-align:center;
+}
+
+#logo {
+  display:inline-block;
+}
+
+ul.guest-info {
+  width:59%;
+}
+
+.guest-logo {
+  text-align:right !important;
+  width:40%;
+}
+
+.guest-collapse {
+  text-align:left !important
+}
+
+#customer-logo {
+  max-height:69px;
+}
+
+#greeting {
+  color:#2f3a3f;
+  display:inline-block;
+  font-style:italic;
+  line-height:400%;
+  vertical-align:middle;
+}
+
+#top-nav-collapse {
+  line-height:70px;
+  text-align:center;
+}
+
+#nav-search-box {
+  background:url("magnifier-icon.png") 90% center no-repeat #fff;
+  background-size:20px 20px;
+  border:1px solid #e6e6e6;
+  box-shadow:none;
+  -moz-box-shadow:none;
+  -o-box-shadow:none;
+  -webkit-box-shadow:none;
+  height:30px;
+  margin-bottom:0;
+  padding:0;
+  padding-left:10px;
+}
+
+#nav-search-box ~ input[value='Search'] {
+  display:none;
+}
+
+/* ---------- Global Sidebar Navigation ---------- */
+
+#global-sidebar {
+  background-color:#2f3a3f;
+  display:inline-block;
+  float:left;
+  height:100%;
+  margin-left:0;
+  min-width:60px;
+  position:fixed;
+  width:6.5%;
+  z-index:2;
+}
+
+#icon-links {
+  display:table;
+  height:60%;
+  margin-top:67%;
+  padding:0;
+  text-align:center;
+  width:100%;
+}
+
+#icon-links img {
+  background-color:#7b8796;
+  display:block;
+  margin:0 auto;
+}
+
+#icon-links img:hover {
+  background-color:#d3a44a;
+}
+
+#icon-links li {
+  display:table-row;
+}
+
+#icon-links li a {
+  padding-right:0;
+  width:100%;
+}
+
+#icon-links li a:hover {
+  background-color:#2f3a3f;
+}
+
+#icon-links img.active-img {
+  background-color:#d3a44a;
+}
+
+/* ---------- Bottom Nav ---------- */
+
+#bottom-nav-contain {
+  background-color:#f8f8f8;
+  margin:2% 0 1%;
+  text-align:center;
+}
+
+#bottom-links {
+  float:none;
+}
+
+#terms-privacy {
+  margin-left:0;
+}
+
+#bottom-links a {
+  color:#b0cbe2;
+  display:inline-block;
+}
+
+#margin-it {
+  margin-right:10px;
+  margin-left:10px;
+}
+
+#bottom-logo {
+  height:60px;
+  width:240px;
+}
+
+/* ---------- General ---------- */
+
+#content {
+  padding:1% 4%;
+}
+
+.add-record {
+  float:right;
+  list-style-type:none;
+  margin:6px;
+  text-align:center;
+}
+
+ul.add-record li a {
+  color:#7cb3d8;
+}
+
+.text-right {
+  text-align:right;
+}
+
+.dashed-border {
+  border-top:1px dotted;
+  padding-top:2%;
+}
+
+.dashed-border-special {
+  border-top:1px dotted;
+  min-height:5px !important;
+}
+
+.padd-bot {
+  padding-bottom:2%;
+}
+
+[class*='span'].height-hack {
+  margin-top:-28px;
+}
+
+.custom-select {
+  background:url(red-down-arrow.png) no-repeat 98% center #f2f2f2;
+  line-height:1;
+  -webkit-appearance:none;
+}
+
+.custom-select option {
+  background-color:white;
+}
+
+#content .no-margin-left,
+[class*='span'].no-margin-left {
+  margin-left:0;
+}
+
+.new_custom_api > .row-fluid,
+.edit_custom_api > .row-fluid,
+.new_customer > .row-fluid,
+.edit_customer > .row-fluid,
+.edit_user > .row-fluid,
+.new_style > .row-fluid,
+.edit_style > .row-fluid
+{
+  margin-left:0;
+}
+
+/* ---------- Generic Styles ---------- */
+
+.backboard-light-grey {
+  background-color:#f0f0f0;
+  margin-top:20px;
+}
+
+.center {
+  float:none;
+  margin-left:0;
+  margin-right:0;
+}
+.ms-red-text {
+  color:#d32027;
+}
+
+.machineshop-header {
+  background-color:#7b8796;
+  *background-color:#7b8796;
+  border-color: #bd362f #bd362f #802420;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  height:44px;
+  list-style-type:none;
+  margin:0;
+  vertical-align:middle;
+}
+
+.machineshop-header:hover {
+  cursor:move;
+}
+
+.machineshop-header:after {
+  clear:both;
+  content:"";
+  display:block;
+  height:0;
+}
+
+.machineshop-header li {
+  color:#fff;
+  display:inline-block;
+  font-size:13px;
+  line-height:44px;
+}
+
+.machineshop-header li:first-of-type {
+  margin-left:10px;
+  margin-right:8px;
+}
+
+/* These li declarations must follow the above */
+
+li.expand-widget, li.collapse-widget {
+  font-size:20px;
+  font-weight:700;
+}
+
+li.expand-widget {
+  display:none;
+}
+
+/* END ...must follow...*/
+
+.btn.btn-custom a {
+  color:#fff;
+}
+
+.machineshop-inner-container {
+  background-color:#fff;
+  border:1px solid #B7B7B7;
+  margin:10px;
+}
+
+.machineshop-inner-container:after {
+  clear:both;
+  content:"";
+  display:block;
+  height:0;
+}
+
+form {
+  margin-bottom:0;
+}
+
+.form_field > input{
+  border-radius:8px;
+}
+
+#paginate-holder {
+  background-color:#FFFFFF;
+  color:#D01E24;
+  font-size:10px;
+  font-style:italic;
+  text-align:right;
+}
+
+#paginate-holder a {
+  background-color:#FFFFFF;
+  color:#D01E24;
+  font-size:10px;
+  font-style:italic;
+  cursor: pointer;
+}
+
+@media (max-width: 979px) {
+  #top-nav-list {
+    float:none;
+    min-width:0;
+  }
+}
+
+@media (max-width: 680px) {
+  #greeting {
+    display:none;
+  }
+}

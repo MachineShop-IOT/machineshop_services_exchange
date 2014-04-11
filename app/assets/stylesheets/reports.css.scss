@@ -1,0 +1,16 @@
+// Place all the styles related to the reports controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#multi-line-chart, #bar-chart, #pie-chart, #api-request-chart {
+  border: solid 1px #e6e6e6;
+}
+
+#multi-line-chart {
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+#api-request-chart {
+  margin-top: 5%;
+}

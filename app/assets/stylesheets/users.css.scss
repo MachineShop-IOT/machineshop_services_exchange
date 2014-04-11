@@ -1,0 +1,192 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ---------- Users Index ---------- */
+.machineshop-inner-container.user_management {
+  overflow:scroll;
+}
+
+#user_search {
+  display:inline-block;
+}
+
+#add-user {
+  margin:6px;
+}
+
+#user-search-box {
+  background:url("magnifier-icon.png") 90% center no-repeat #efefef;
+  background-size:20px 20px;
+  border:1px solid #e6e6e6;
+  box-shadow:none;
+  -moz-box-shadow:none;
+  -o-box-shadow:none;
+  -webkit-box-shadow:none;
+  height:30px;
+  margin:12px 0 12px 12px;
+  padding:0;
+  padding-left:10px;
+}
+
+#user-search-box ~ input[value=Search] {
+  display:none;
+}
+
+/* ---------- User Edit/New ---------- */
+
+#new-user-wrap,
+#edit-user-wrap,
+#user-index-wrap {
+}
+
+#edit-user-wrap .span9 {
+  color:#999
+}
+
+#new-api-key-btn {
+  /* background-color:#7cb3d8; */
+  /* box-shadow:inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05); */
+  /* -webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05); */
+  /* height:20px; */
+  /* line-height:20px; */
+  /* vertical-align:middle; */
+}
+
+#edit-user, #endpoint_auth {
+  margin-top:16px;
+}
+
+#services-list .span6.available-services {
+  margin-bottom:0;
+  padding-right:2%;
+  word-wrap:break-word;
+  color:#4D4D4D;
+  font-size:12px;
+}
+
+#services-list .span6.available-services:before {
+  content:'\2022';
+}
+
+#assign-services {
+  margin-top:20px;
+}
+
+#check-boxes-wrap {
+  margin-left:0;
+}
+
+#check-boxes-wrap:after {
+  clear:both;
+  content:"";
+  display:block;
+  height:0;
+}
+
+#check-boxes-wrap label {
+  margin-bottom:0;
+}
+
+.resource-name {
+  border:1px solid #e6e6e6;
+}
+
+#routes_container h4 {
+  font-weight:normal;
+  margin-left:10px;
+}
+
+.show-hide-routes {
+  cursor:pointer;
+  margin-left:0px !important;
+  text-align:center;
+  /* text-shadow:-2px -2px 1px #000; */
+}
+
+.span12.no-margin-left.routes-by-resource {
+  display:none;
+}
+
+.routes-by-resource {
+  background-color:#f0f0f0;
+  padding-top:10px;
+}
+
+.checkmark_routes {
+  margin-left:10px;
+}
+
+[class*=checkmark_routes] .form_field, [class*=checkmark_routes] .form_label {
+  display:inline-block;
+  line-height:100%;
+}
+
+[class*=checkmark_routes] .form_field input {
+  height:24px;
+  width:24px;
+}
+
+[class*=checkmark_routes] .form_label {
+  padding-left:0;
+}
+
+[class*=checkmark_routes] .form_label label {
+  font-size:12px;
+}
+
+.checkmark_routes_all > div.form_label:first-of-type {
+  padding:10px 0;
+}
+.checkmark_routes_all .form_label label {
+  font-size:14px;
+  font-weight:500;
+}
+
+ul.span6 li.checkmark_routes, ul.span6 li.route-labels {
+  display:inline-block;
+}
+
+.route-labels {
+  margin:0;
+}
+
+.route-labels label {
+  color:#999;
+  word-wrap:break-word;
+}
+
+#expand-collapse-all {
+  cursor:pointer;
+  text-align:center;
+}
+
+#collapse-all {
+  display:none;
+}
+
+#save-cancel, #save-cancel-top {
+  float:right;
+  padding:20px 0;
+}
+
+#save-cancel > :first-child,
+#save-cancel-top > :first-child {
+  margin-right:10px;
+}
+
+/* ---------- New User Show Profile ---------- */
+
+.profile .machineshop-inner-container h4 {
+  color:#D32027;
+  font-weight:normal;
+  margin:10px;
+}
+
+.profile ul {
+  list-style-type:none;
+}
+
+.profile {
+  margin-top:24px;
+}

@@ -1,0 +1,29 @@
+= form_for @faq do |f|
+  .span12
+    .error
+      - if @faq.errors.any?
+        #error_explanation
+          %p.ms-red-text= "#{pluralize(@faq.errors.count, "error")} prohibited this faq from being saved:"
+          %ul
+            - @faq.errors.full_messages.each do |msg|
+              %li.ms-red-text= msg
+
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :question
+    .span10
+      .form_field
+        = f.text_area :question, rows: '3', class: 'input-block-level'
+  .row-fluid.span12
+    .span2
+      .form_label
+        = f.label :answer
+    .span10
+      .form_field
+        = f.text_area :answer, rows: '12', class: 'input-block-level'
+
+  .row-fluid.span12
+    #save-cancel
+      = link_to 'Cancel', faqs_path
+      = f.submit 'Save', class: 'btn-large btn-custom-large'
