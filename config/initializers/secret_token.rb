@@ -12,5 +12,5 @@
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
 
-YOUR_APP::Application.config.secret_token = 'YOUR_TOKEN'
+MachineshopPortal::Application.config.secret_token = 'YOUR_TOKEN'
 

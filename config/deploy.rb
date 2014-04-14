@@ -5,7 +5,7 @@ require 'bundler/capistrano'
 require 'rvm/capistrano'
 
 # environment
-set :application, 'machineshop_services_exchange'
+set :application, 'machineshop_portal'
 set :keep_releases, 3
 set :rvm_path, 'YOUR_PATH_TO/.rvm/'
 set :rvm_bin_path, 'YOUR_PATH_TO/.rvm/bin'
